@@ -218,7 +218,7 @@
             "Porque Chrome lo exige para aceptar el token."
           ],
           "certa": 2,
-          "explica": "Sin fecha de versión estable, con Mozilla neutral y WebKit en contra, la mayoría de los visitantes no tendrá la API. WebMCP es preparación, no ranking: GEO y las citas en las IA quedan en la Formación inemaSEO.",
+          "explica": "Sin fecha de versión estable, con Mozilla neutral y WebKit en contra, la mayoría de los visitantes no tendrá la API. WebMCP es preparación, no ranking: GEO y las citas en las IA quedan en la Formación ARCKHÉSEO.",
           "ref": "diagrama"
         }
       ]
@@ -271,13 +271,13 @@
           "icone": "chat"
         },
         {
-          "t": "GEO y citación en las IAs: Formación inemaSEO",
-          "href": "https://inematds.github.io/formacao-inemaseo-ias-v72/es/",
+          "t": "GEO y citación en las IAs: Formación ARCKHÉSEO",
+          "href": "https://linnoff88-dev.github.io/
           "icone": "lupa"
         },
         {
           "t": "Curso 0 de la formación: cómo usan hoy los agentes un sitio web",
-          "href": "https://inematds.github.io/formacao-webmcp-base-v72/es/",
+          "href": "https://linnoff88-dev.github.io/
           "icone": "camadas"
         }
       ]

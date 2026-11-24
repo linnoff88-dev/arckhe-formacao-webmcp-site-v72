@@ -1,4 +1,4 @@
-/* INEMA Learning 7.9.12 — conferidor: o aluno cola (ou carrega) o arquivo que escreveu e a página confere.
+/* ARCKHÉ Learning 7.9.12 — conferidor: o aluno cola (ou carrega) o arquivo que escreveu e a página confere.
    Mesmas regras e mensagens do conferir.py (opção de terminal). Regras: campos, planos, cada_plano, duracao, termos.
    Tudo no navegador: nada é enviado. Rascunho guardado em localStorage "<data-curso>:conf:<id>:txt"; a última
    conferência certa em "<data-curso>:conf:<id>" ({ok, data}). Todo texto vem do JSON (ui do curso e da seção). */
@@ -84,7 +84,7 @@
     var n = planos.length || (D.regras || []).reduce(function (s, r) { return s + (r.tipo === "campos" ? r.campos.length : 0); }, 0);
     return { ok: true, msg: fmt(D.ok, { n: n, s: num(segs) }), faltas: [] };
   }
-  window.INEMAConferir = conferir;  // para testes (conferir-tela.cjs)
+  window.ARCKHÉConferir = conferir;  // para testes (conferir-tela.cjs)
 
   document.querySelectorAll(".confer").forEach(function (box) {
     var D; try { D = JSON.parse(box.querySelector(".cf-dados").textContent); } catch (e) { return; }

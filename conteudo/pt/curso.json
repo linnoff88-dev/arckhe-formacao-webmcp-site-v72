@@ -1,21 +1,21 @@
 {
   "id": "formacao-webmcp-site-v72",
   "lang": "pt-BR",
-  "url": "https://inematds.github.io/formacao-webmcp-site-v72/",
+  "url": "https://linnoff88-dev.github.io/
   "nome": "WebMCP no seu site",
   "sub": "Formação WebMCP · curso 2",
   "volta": {
     "t": "Área WebMCP",
-    "href": "https://eventos.inema.pro/webmcp/"
+    "href": "https://eventos.ARCKHÉ.pro/webmcp/"
   },
   "lado_card": {
     "rot": "Formação WebMCP",
     "t": "Curso 2 de 6",
     "texto": "Ferramentas na página com document.modelContext (rascunho de 16/10/2026), fallback e teste nos três modos. O kit roda sem custo: polyfill e o Chromium do Playwright.",
     "link": "Abrir a pasta kit/ no GitHub",
-    "href": "https://github.com/inematds/formacao-webmcp-site-v72/tree/main/kit"
+    "href": "https://github.com/linnoff88-dev/formacao-webmcp-site-v72/tree/main/kit"
   },
-  "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · Formação WebMCP, curso 2 de 6 · <a href=\"https://eventos.inema.pro/webmcp/\">eventos.inema.pro/webmcp</a> · <a href=\"https://github.com/inematds/formacao-webmcp-site-v72/tree/main/kit\">kit do curso no GitHub</a> · <a href=\"https://inema.club/\">inema.club</a>",
+  "rodape": "ARCKHÉ AI · conteúdo aberto e gratuito · formato ARCKHÉ Learning v7.2 · Formação WebMCP, curso 2 de 6 · <a href=\"https://eventos.ARCKHÉ.pro/webmcp/\">eventos.ARCKHÉ.pro/webmcp</a> · <a href=\"https://github.com/linnoff88-dev/formacao-webmcp-site-v72/tree/main/kit\">kit do curso no GitHub</a> · <a href=\"https://ARCKHÉ AI/\">ARCKHÉ AI</a>",
   "videos": {},
   "inicio": {
     "kicker": "Formação WebMCP · curso 2 de 6 · 8 aulas",
@@ -24,7 +24,7 @@
     "cta": "Começar pela aula 1",
     "cta2": {
       "t": "Ver a área da formação",
-      "href": "https://eventos.inema.pro/webmcp/"
+      "href": "https://eventos.ARCKHÉ.pro/webmcp/"
     },
     "capa_alt": "Mesa de desenvolvedor escura com monitor mostrando um navegador e um cabo encaixado num pequeno hub metálico.",
     "numeros": [

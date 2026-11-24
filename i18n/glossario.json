@@ -6,7 +6,7 @@
     "termos técnicos em inglês": "keep in English: WebMCP, MCP, tool, origin trial, flag, polyfill, fallback, Community Group, Draft Community Group Report, prompt injection, spotlighting, headless, Chromium, Playwright",
     "pronto quando": "done when",
     "Formação WebMCP": "WebMCP Track",
-    "INEMA.CLUB": "INEMA.CLUB"
+    "ARCKHÉ AI": "ARCKHÉ AI"
   },
   "es": {
     "REGRA: tudo dentro de <pre> e de <code> é saída ou comando real do kit (em português) e fica IGUAL, sem traduzir": "REGLA: todo lo que está dentro de <pre> y de <code> es salida o comando real del kit (en portugués) y queda EXACTAMENTE igual, sin traducir (p. ej. ferramentas registradas, resultado (string), saída: 0, página: sem, página: com, nome repetido: recusado, execução cancelada pelo chamador, depois do abort(), eventos:, esperando a pessoa, pessoa clicou em Reservar, CATÁLOGO:, erros, avisos, BATERIA:, FALHA, reserva recusada na tela não reserva, tema inválido: cobol, a pessoa recusou na tela, Nenhuma reserva). Solo los [marcadores entre corchetes] dentro de <code> se traducen.",
@@ -15,6 +15,6 @@
     "termos técnicos em inglês": "mantener en inglés: WebMCP, MCP, tool, origin trial, flag, polyfill, fallback, Community Group, Draft Community Group Report, prompt injection, spotlighting, headless, Chromium, Playwright",
     "pronto quando": "listo cuando",
     "Formação WebMCP": "Formación WebMCP",
-    "INEMA.CLUB": "INEMA.CLUB"
+    "ARCKHÉ AI": "ARCKHÉ AI"
   }
 }

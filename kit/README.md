@@ -16,4 +16,4 @@ node scripts/testar.mjs          # bateria completa (sem modelo, sem API paga)
 | `lib/navegador.mjs` | servidor em 127.0.0.1 + Chromium do Playwright 1.64.0 nos modos `sem`, `polyfill` (`@mcp-b/webmcp-polyfill` 6.0.3, não oficial) e `nativo` (`--enable-features=WebMCPTesting`) |
 | `blocos/`, `saidas/`, `capturar.sh` | os blocos "Terminal" do curso e as saídas capturadas |
 
-Curso: https://inematds.github.io/formacao-webmcp-site-v72/ · conteúdo aberto e gratuito do INEMA.CLUB.
+Curso: https://linnoff88-dev.github.io/ · conteúdo aberto e gratuito do ARCKHÉ AI.

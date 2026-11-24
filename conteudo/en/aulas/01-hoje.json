@@ -218,7 +218,7 @@
             "Because Chrome requires it in order to accept the token."
           ],
           "certa": 2,
-          "explica": "With no stable release date, Mozilla neutral, and WebKit against it, most visitors will not have the API. WebMCP is preparation, not ranking: GEO and citation in AIs live in the inemaSEO Track.",
+          "explica": "With no stable release date, Mozilla neutral, and WebKit against it, most visitors will not have the API. WebMCP is preparation, not ranking: GEO and citation in AIs live in the ARCKHÉSEO Track.",
           "ref": "diagrama"
         }
       ]
@@ -271,13 +271,13 @@
           "icone": "chat"
         },
         {
-          "t": "GEO and getting cited by AIs: inemaSEO Track",
-          "href": "https://inematds.github.io/formacao-inemaseo-ias-v72/en/",
+          "t": "GEO and getting cited by AIs: ARCKHÉSEO Track",
+          "href": "https://linnoff88-dev.github.io/
           "icone": "lupa"
         },
         {
           "t": "Track course 0: how agents use a site today",
-          "href": "https://inematds.github.io/formacao-webmcp-base-v72/en/",
+          "href": "https://linnoff88-dev.github.io/
           "icone": "camadas"
         }
       ]

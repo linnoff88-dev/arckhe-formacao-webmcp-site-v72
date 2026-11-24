@@ -1,21 +1,21 @@
 {
   "id": "formacao-webmcp-site-v72",
   "lang": "en",
-  "url": "https://inematds.github.io/formacao-webmcp-site-v72/en/",
+  "url": "https://linnoff88-dev.github.io/
   "nome": "WebMCP on your site",
   "sub": "WebMCP Track · course 2",
   "volta": {
     "t": "WebMCP Area",
-    "href": "https://eventos.inema.pro/webmcp/"
+    "href": "https://eventos.ARCKHÉ.pro/webmcp/"
   },
   "lado_card": {
     "rot": "WebMCP Track",
     "t": "Course 2 of 6",
     "texto": "Tools on the page with document.modelContext (draft from 10/16/2026), fallback, and testing in all three modes. The kit runs at no cost: polyfill and Playwright's Chromium.",
     "link": "Open the kit/ folder on GitHub",
-    "href": "https://github.com/inematds/formacao-webmcp-site-v72/tree/main/kit"
+    "href": "https://github.com/linnoff88-dev/formacao-webmcp-site-v72/tree/main/kit"
   },
-  "rodape": "INEMA.CLUB · open and free content · INEMA Learning v7.2 format · WebMCP Track, course 2 of 6 · <a href=\"https://eventos.inema.pro/webmcp/\">eventos.inema.pro/webmcp</a> · <a href=\"https://github.com/inematds/formacao-webmcp-site-v72/tree/main/kit\">course kit on GitHub</a> · <a href=\"https://inema.club/\">inema.club</a>",
+  "rodape": "ARCKHÉ AI · open and free content · ARCKHÉ Learning v7.2 format · WebMCP Track, course 2 of 6 · <a href=\"https://eventos.ARCKHÉ.pro/webmcp/\">eventos.ARCKHÉ.pro/webmcp</a> · <a href=\"https://github.com/linnoff88-dev/formacao-webmcp-site-v72/tree/main/kit\">course kit on GitHub</a> · <a href=\"https://ARCKHÉ AI/\">ARCKHÉ AI</a>",
   "videos": {},
   "inicio": {
     "kicker": "WebMCP Track · course 2 of 6 · 8 lessons",
@@ -24,7 +24,7 @@
     "cta": "Start with lesson 1",
     "cta2": {
       "t": "See the track area",
-      "href": "https://eventos.inema.pro/webmcp/"
+      "href": "https://eventos.ARCKHÉ.pro/webmcp/"
     },
     "capa_alt": "Dark developer desk with a monitor showing a browser and a cable plugged into a small metal hub.",
     "numeros": [

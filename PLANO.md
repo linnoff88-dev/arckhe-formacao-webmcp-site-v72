@@ -2,7 +2,7 @@
 
 Fonte de verdade da API: **rascunho do W3C Web Machine Learning Community Group de 16/10/2026** (https://webmachinelearning.github.io/webmcp/, baixado e lido em 19/10/2026) + docs do Chrome (WebMCP, atualizada em 07/10/2026; API declarativa, atualizada em 25/09/2026) + `implementation-status.md` do repositório. Comportamento real medido no **Chromium 156.0.8078.4 do Playwright 1.64.0** (modo nativo = `--enable-features=WebMCPTesting`, equivalente à flag `chrome://flags/#enable-webmcp-testing`) e no **@mcp-b/webmcp-polyfill 6.0.3** (publicado em 14/10/2026). Quando a spec e o navegador divergem, o curso mostra os dois e diz qual vale para o código (o que roda).
 
-Fora do escopo (dono em outro curso, só link): panorama agente × site e acessibilidade (curso 0 `formacao-webmcp-base-v72`); servidor MCP (curso 1 `formacao-webmcp-mcp-v72`); agente que consome WebMCP e Playwright/DevTools MCP (curso 3 `formacao-webmcp-navegador-v72`); prompt injection, `exposedTo` e iframes a fundo, confirmação como defesa (curso 4 `formacao-webmcp-seguranca-v72`); evals a fundo (`loop-r-eng-verificacao-v72`); GEO/nota de prontidão (Formação inemaSEO).
+Fora do escopo (dono em outro curso, só link): panorama agente × site e acessibilidade (curso 0 `formacao-webmcp-base-v72`); servidor MCP (curso 1 `formacao-webmcp-mcp-v72`); agente que consome WebMCP e Playwright/DevTools MCP (curso 3 `formacao-webmcp-navegador-v72`); prompt injection, `exposedTo` e iframes a fundo, confirmação como defesa (curso 4 `formacao-webmcp-seguranca-v72`); evals a fundo (`loop-r-eng-verificacao-v72`); GEO/nota de prontidão (Formação ARCKHÉSEO).
 
 ## Conferência das fontes (passo 0 do BRIEF)
 
@@ -39,10 +39,10 @@ Cada afirmação das fontes antigas que o curso usa, contra a PESQUISA de 19/10/
 | Inventário → prioridade por valor/risco → extrair lógica da interface → wrapper fino | confere | aula 7 (a mesma função atende clique e ferramenta) |
 | React `useEffect` + cleanup com `AbortController`; serviço Angular; Next.js | confere (padrão) / frameworks **sem versão** | aula 7 só o padrão (registrar no efeito, abortar no cleanup), sem prometer versão de framework; "Angular tem suporte experimental" só como frase da doc do Chrome (07/10/2026) |
 
-### webmcp-readiness (`lib/audit-rules.mjs`) e área `inemaeventos/webmcp`
+### webmcp-readiness (`lib/audit-rules.mjs`) e área `ARCKHÉeventos/webmcp`
 | Afirmação | Marca | Uso |
 |---|---|---|
-| Procura `document.modelContext`, `getTools`, forms `toolname` | confere | citado na aula 8 como olhar de fora; nota/pesos = inemaSEO (link) |
+| Procura `document.modelContext`, `getTools`, forms `toolname` | confere | citado na aula 8 como olhar de fora; nota/pesos = ARCKHÉSEO (link) |
 
 ### Itens [incerto]/[2ª] da PESQUISA que NÃO entram como fato
 Versão exata em que o Chrome removeu o alias `navigator`; data da posição do WebKit; remoção de `provideContext` em mar/2026 (só "não existe na spec de 16/10"); qualquer data de Chrome estável.
@@ -68,7 +68,7 @@ Kit: `kit/` no repo. Clonar em `~/projetos/formacao-webmcp-site-v72`; blocos com
 | 7 | catalogo | Desenhar o catálogo e migrar um site existente sem quebrar ninguém | desenhar um catálogo pequeno (uma intenção por ferramenta), revisá-lo com o validador e integrá-lo a um site existente com detecção e fallback. | site existente → inventário → regra compartilhada → wrapper fino → detecção + fallback | `node scripts/validar-catalogo.mjs catalogos/ruim.mjs` → `5 erros` (saída 1); o seu → `0 erros` (saída 0) |
 | 8 | testar | Testar sozinho: bateria nos três modos, checklist e plano | rodar a bateria automática nos três modos, ver uma quebra ser pega e sair com o checklist e o plano datado da sua página. | mapa 4 degraus + gerador | `node scripts/testar.mjs` → `BATERIA: 31/31 ok`, saída 0; com a confirmação removida → `FALHA` e saída 1 |
 
-Última aula: links para `https://inematds.github.io/formacao-webmcp-navegador-v72/` (curso 3, ainda não publicado em 19/10/2026).
+Última aula: links para `https://linnoff88-dev.github.io/ (curso 3, ainda não publicado em 19/10/2026).
 Vídeo: nenhum (o short WebMCP é do curso 0, aula 1).
 Imagens: capa + inicio + 8 heroes pelo Codex, uma por vez (`scratchpad/formacao-webmcp-site-v72-img/`).
 

@@ -74,7 +74,7 @@
         {
           "rot": "Terminal · clonar, instalar y descargar Chromium",
           "icone": "baixar",
-          "conteudo": "git clone -q https://github.com/inematds/formacao-webmcp-site-v72 ~/projetos/formacao-webmcp-site-v72\ncd ~/projetos/formacao-webmcp-site-v72/kit\nnpm ci\nnpx playwright install chromium\necho \"saída: $?\""
+          "conteudo": "git clone -q https://github.com/linnoff88-dev/formacao-webmcp-site-v72 ~/projetos/formacao-webmcp-site-v72\ncd ~/projetos/formacao-webmcp-site-v72/kit\nnpm ci\nnpx playwright install chromium\necho \"saída: $?\""
         }
       ],
       "saida": {
@@ -286,7 +286,7 @@
         },
         {
           "t": "Kit del curso en GitHub",
-          "href": "https://github.com/inematds/formacao-webmcp-site-v72/tree/main/kit",
+          "href": "https://github.com/linnoff88-dev/formacao-webmcp-site-v72/tree/main/kit",
           "icone": "pasta"
         }
       ]
