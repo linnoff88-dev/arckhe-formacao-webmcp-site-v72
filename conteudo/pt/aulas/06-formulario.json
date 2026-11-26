@@ -92,11 +92,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? não, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? não, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0</pre><p>A busca volta direto (toolautosubmit). A reserva fica preenchida e parada até o clique: o declarativa.mjs faz o papel da pessoa.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? nêo, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? nêo, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0</pre><p>A busca volta direto (toolautosubmit). A reserva fica preenchida e parada até o clique: o declarativa.mjs faz o papel da pessoa.</p>"
           },
           {
             "rot": "Erro comum: toolautosubmit em tudo",
-            "html": "<p>Com <code>toolautosubmit</code> no formulário de reserva, o agente preenche e envia sem a pessoa ver. Reserve o envio automático para o que só lê. E lembre: <code>respondWith</code> exige <code>preventDefault()</code> antes, senão o navegador segue com o envio normal.</p>"
+            "html": "<p>Com <code>toolautosubmit</code> no formulário de reserva, o agente preenche e envia sem a pessoa ver. Reserve o envio automático para o que só lê. E lembre: <code>respondWith</code> exige <code>preventDefault()</code> antes, senêo o navegador segue com o envio normal.</p>"
           }
         ]
       }
@@ -111,7 +111,7 @@
           "titulo": "E1 · Os dois formulários",
           "min": "4 min",
           "texto": "Rode o bloco e compare as linhas de busca e de reserva.",
-          "pronto": "<code>node scripts/declarativa.mjs nativo</code> → <code>enviado? não, esperando a pessoa</code> e <code>pessoa clicou em Reservar → {\"reservado\":true,</code> e <code>saída: 0</code>."
+          "pronto": "<code>node scripts/declarativa.mjs nativo</code> → <code>enviado? nêo, esperando a pessoa</code> e <code>pessoa clicou em Reservar → {\"reservado\":true,</code> e <code>saída: 0</code>."
         },
         {
           "id": "e2",
@@ -125,24 +125,24 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
-          "p": "Qual a situação da API declarativa (toolname) em 19/10/2026?",
+          "p": "Qual a situaçêo da API declarativa (toolname) em 19/10/2026?",
           "opcoes": [
             "Faz parte da spec de 16/10/2026 junto com registerTool.",
             "Foi removida do Chrome junto com navigator.modelContext.",
             "Está fora da spec; o Chrome implementa no origin trial.",
-            "Já é padrão W3C, só falta o Safari implementar."
+            "Já é padrêo W3C, só falta o Safari implementar."
           ],
           "certa": 2,
-          "explica": "O README diz que é exploração futura, fora da spec. O Chrome documenta e implementa no trial. Por isso o curso põe o selo \"experimental, fora da spec\".",
+          "explica": "O README diz que é exploraçêo futura, fora da spec. O Chrome documenta e implementa no trial. Por isso o curso põe o selo \"experimental, fora da spec\".",
           "ref": "diagrama"
         },
         {
           "p": "Quando usar toolautosubmit?",
           "opcoes": [
-            "Em todo formulário, para o agente não travar.",
+            "Em todo formulário, para o agente nêo travar.",
             "Só em formulários com mais de três campos.",
             "Nunca: o Chrome removeu o atributo no 156.",
             "Em formulário que só lê, como uma busca."
@@ -155,7 +155,7 @@
           "p": "Como o submit sabe que foi o agente que preencheu?",
           "opcoes": [
             "Pelo atributo e.agentInvoked do SubmitEvent.",
-            "Pelo cabeçalho User-Agent da requisição.",
+            "Pelo cabeçalho User-Agent da requisiçêo.",
             "Por um campo oculto que o navegador cria.",
             "Pelo evento toolchange disparado antes."
           ],
@@ -164,12 +164,12 @@
           "ref": "codigo"
         },
         {
-          "p": "Sem toolparamdescription num campo, de onde o Chrome tira a descrição?",
+          "p": "Sem toolparamdescription num campo, de onde o Chrome tira a descriçêo?",
           "opcoes": [
             "Do atributo placeholder do campo.",
             "Do label associado ao campo.",
-            "Do texto do botão de enviar.",
-            "De lugar nenhum: o campo fica sem descrição."
+            "Do texto do botêo de enviar.",
+            "De lugar nenhum: o campo fica sem descriçêo."
           ],
           "certa": 1,
           "explica": "Pela doc do Chrome (25/09/2026), sem toolparamdescription o navegador usa o label associado; sem label, o aria-description. Formulário bem rotulado já ajuda.",
@@ -183,7 +183,7 @@
       "itens": [
         {
           "t": "Fora da spec",
-          "texto": "toolname/tooldescription/toolautosubmit existem no Chrome em trial, não na spec de 16/10/2026."
+          "texto": "toolname/tooldescription/toolautosubmit existem no Chrome em trial, nêo na spec de 16/10/2026."
         },
         {
           "t": "Quem envia",

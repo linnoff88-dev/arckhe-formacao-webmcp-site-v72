@@ -5,8 +5,8 @@
   "titulo": "Primeira ferramenta: registerTool com inputSchema e execute",
   "titulo_curto": "Primeira ferramenta",
   "minutos": 18,
-  "lead": "Uma ferramenta WebMCP é um objeto com nome, descrição, esquema de entrada e uma função execute. A página registra; o agente lista com getTools e chama com executeTool. Nesta aula você lê a ferramenta de busca do kit, chama do jeito que um agente chamaria e registra a sua primeira.",
-  "objetivo": "registrar uma ferramenta com nome, descrição, inputSchema e execute, e chamá-la como um agente chamaria, vendo o resultado e a tela.",
+  "lead": "Uma ferramenta WebMCP é um objeto com nome, descriçêo, esquema de entrada e uma funçêo execute. A página registra; o agente lista com getTools e chama com executeTool. Nesta aula você lê a ferramenta de busca do kit, chama do jeito que um agente chamaria e registra a sua primeira.",
+  "objetivo": "registrar uma ferramenta com nome, descriçêo, inputSchema e execute, e chamá-la como um agente chamaria, vendo o resultado e a tela.",
   "competencias": [
     "escrever-definicao-de-ferramenta",
     "chamar-com-executeTool",
@@ -15,7 +15,7 @@
   "aprende": [
     {
       "icone": "arquivo",
-      "t": "Os campos de uma ferramenta e as regras de nome e descrição"
+      "t": "Os campos de uma ferramenta e as regras de nome e descriçêo"
     },
     {
       "icone": "lista",
@@ -30,30 +30,30 @@
       "t": "A sua primeira ferramenta no extras.mjs"
     }
   ],
-  "hero_alt": "Mão encaixando um conector metálico numa régua de portas vazia, com um monitor desfocado ao fundo.",
+  "hero_alt": "Mêo encaixando um conector metálico numa régua de portas vazia, com um monitor desfocado ao fundo.",
   "secoes": [
     {
       "tipo": "diagrama",
-      "titulo": "Da definição ao resultado",
+      "titulo": "Da definiçêo ao resultado",
       "sub": "Clique em cada passo.",
       "nos": [
         {
           "icone": "arquivo",
-          "titulo": "Definição",
+          "titulo": "Definiçêo",
           "sub": "objeto JS",
-          "detalhe": "name (1 a 128 caracteres: letras e números ASCII, _ - .), title opcional, description não vazia, inputSchema (JSON Schema), execute(input, { signal }) e annotations opcionais."
+          "detalhe": "name (1 a 128 caracteres: letras e números ASCII, _ - .), title opcional, description nêo vazia, inputSchema (JSON Schema), execute(input, { signal }) e annotations opcionais."
         },
         {
           "icone": "carregar",
           "titulo": "registerTool",
           "sub": "a página",
-          "detalhe": "document.modelContext.registerTool(definição, { signal }) devolve uma Promise sem valor. Rejeita com InvalidStateError se o nome repete, se foge da regra ou se a descrição está vazia."
+          "detalhe": "document.modelContext.registerTool(definiçêo, { signal }) devolve uma Promise sem valor. Rejeita com InvalidStateError se o nome repete, se foge da regra ou se a descriçêo está vazia."
         },
         {
           "icone": "lupa",
           "titulo": "getTools",
           "sub": "o agente",
-          "detalhe": "Devolve as ferramentas registradas com name, title, description, inputSchema, annotations, origin e window. Imprima só o que precisa: window não vira JSON."
+          "detalhe": "Devolve as ferramentas registradas com name, title, description, inputSchema, annotations, origin e window. Imprima só o que precisa: window nêo vira JSON."
         },
         {
           "icone": "play",
@@ -79,12 +79,12 @@
         {
           "rot": "Trecho · kit/pagina/ferramentas.mjs",
           "icone": "arquivo",
-          "conteudo": "{\n  name: 'buscar_oficinas',\n  title: 'Buscar oficinas',\n  description: 'Lista as oficinas da agenda por tema. Só lê: não reserva nada. Use apenasComVaga=true para ver só as que ainda têm vaga.',\n  inputSchema: {\n    type: 'object',\n    properties: {\n      tema: { type: 'string', enum: TEMAS, description: 'Tema da oficina.' },\n      apenasComVaga: { type: 'boolean', description: 'true = só oficinas com vaga.' }\n    },\n    additionalProperties: false\n  },\n  annotations: { readOnlyHint: true },\n  execute: comErroUtil(async input => {\n    const lista = agenda.buscar(input);\n    ui.mostrarResultados(lista, input);   // a pessoa vê o mesmo que o agente recebeu\n    return { total: lista.length, oficinas: lista };\n  })\n}"
+          "conteudo": "{\n  name: 'buscar_oficinas',\n  title: 'Buscar oficinas',\n  description: 'Lista as oficinas da agenda por tema. Só lê: nêo reserva nada. Use apenasComVaga=true para ver só as que ainda têm vaga.',\n  inputSchema: {\n    type: 'object',\n    properties: {\n      tema: { type: 'string', enum: TEMAS, description: 'Tema da oficina.' },\n      apenasComVaga: { type: 'boolean', description: 'true = só oficinas com vaga.' }\n    },\n    additionalProperties: false\n  },\n  annotations: { readOnlyHint: true },\n  execute: comErroUtil(async input => {\n    const lista = agenda.buscar(input);\n    ui.mostrarResultados(lista, input);   // a pessoa vê o mesmo que o agente recebeu\n    return { total: lista.length, oficinas: lista };\n  })\n}"
         },
         {
-          "rot": "Trecho · registrar com detecção (ferramentas.mjs)",
+          "rot": "Trecho · registrar com detecçêo (ferramentas.mjs)",
           "icone": "arquivo",
-          "conteudo": "const mc = document.modelContext;   // nome atual (16/10/2026)\nif (!mc || typeof mc.registerTool !== 'function') {\n  aviso?.('Este navegador não expõe WebMCP. Tudo funciona pelo formulário.');\n  return { modo: 'sem', registradas: 0 };\n}\nconst pagina = new AbortController();\naddEventListener('pagehide', () => pagina.abort(), { once: true });\nawait registrar(mc, defs, pagina.signal);"
+          "conteudo": "const mc = document.modelContext;   // nome atual (16/10/2026)\nif (!mc || typeof mc.registerTool !== 'function') {\n  aviso?.('Este navegador nêo expõe WebMCP. Tudo funciona pelo formulário.');\n  return { modo: 'sem', registradas: 0 };\n}\nconst pagina = new AbortController();\naddEventListener('pagehide', () => pagina.abort(), { once: true });\nawait registrar(mc, defs, pagina.signal);"
         }
       ]
     },
@@ -108,7 +108,7 @@
           },
           {
             "rot": "Erro comum: texto na entrada, throw no execute",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nnavigator.modelContext (nome antigo): undefined\nentrada em texto JSON em vez de objeto: TypeError\nexecute que lança: UnknownError: Tool was executed but the invocation failed. For example, the script function threw an error\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nnavigator.modelContext (nome antigo): undefined\nentrada em texto JSON em vez de objeto: TypeError\nexecute que lança: UnknownError: Tool execution failed</pre><p>Exemplos antigos passavam <code>JSON.stringify(input)</code> para contornar uma implementação de setembro: hoje dá TypeError nos dois. E o motivo de um <code>throw</code> não chega ao agente (UnknownError genérico). Por isso o kit devolve <code>{ erro }</code> como dado (aula 7).</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nnavigator.modelContext (nome antigo): undefined\nentrada em texto JSON em vez de objeto: TypeError\nexecute que lança: UnknownError: Tool was executed but the invocation failed. For example, the script function threw an error\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nnavigator.modelContext (nome antigo): undefined\nentrada em texto JSON em vez de objeto: TypeError\nexecute que lança: UnknownError: Tool execution failed</pre><p>Exemplos antigos passavam <code>JSON.stringify(input)</code> para contornar uma implementaçêo de setembro: hoje dá TypeError nos dois. E o motivo de um <code>throw</code> nêo chega ao agente (UnknownError genérico). Por isso o kit devolve <code>{ erro }</code> como dado (aula 7).</p>"
           }
         ]
       }
@@ -121,7 +121,7 @@
         {
           "rot": "Terminal · ensaio com contar_vagas",
           "icone": "caneta",
-          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a3; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\ncat > $E/extras.mjs <<'FIM'\nexport function extras(agenda) {\n  return [{\n    name: 'contar_vagas',\n    description: 'Soma as vagas livres das oficinas de um tema. Só lê: não reserva nada.',\n    inputSchema: {\n      type: 'object',\n      properties: { tema: { type: 'string', enum: ['html', 'javascript', 'webmcp', 'mcp'], description: 'Tema da oficina.' } },\n      required: ['tema'],\n      additionalProperties: false\n    },\n    annotations: { readOnlyHint: true },\n    async execute({ tema }) {\n      const lista = agenda.buscar({ tema });\n      return { tema, vagas: lista.reduce((soma, o) => soma + o.vagas, 0) };\n    }\n  }];\n}\nFIM\nPAGINA=$E node scripts/listar.mjs nativo | tail -1\nPAGINA=$E node scripts/executar.mjs nativo contar_vagas '{\"tema\":\"html\"}'; echo \"saída: $?\""
+          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a3; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\ncat > $E/extras.mjs <<'FIM'\nexport function extras(agenda) {\n  return [{\n    name: 'contar_vagas',\n    description: 'Soma as vagas livres das oficinas de um tema. Só lê: nêo reserva nada.',\n    inputSchema: {\n      type: 'object',\n      properties: { tema: { type: 'string', enum: ['html', 'javascript', 'webmcp', 'mcp'], description: 'Tema da oficina.' } },\n      required: ['tema'],\n      additionalProperties: false\n    },\n    annotations: { readOnlyHint: true },\n    async execute({ tema }) {\n      const lista = agenda.buscar({ tema });\n      return { tema, vagas: lista.reduce((soma, o) => soma + o.vagas, 0) };\n    }\n  }];\n}\nFIM\nPAGINA=$E node scripts/listar.mjs nativo | tail -1\nPAGINA=$E node scripts/executar.mjs nativo contar_vagas '{\"tema\":\"html\"}'; echo \"saída: $?\""
         }
       ],
       "saida": {
@@ -157,7 +157,7 @@
           "id": "e3",
           "titulo": "E3 · Uma ferramenta sua",
           "min": "15 min",
-          "texto": "Escreva outra ferramenta só de leitura no extras.mjs, por exemplo proxima_oficina (a de data mais próxima). Nome com _, descrição que diz o que não faz, schema fechado.",
+          "texto": "Escreva outra ferramenta só de leitura no extras.mjs, por exemplo proxima_oficina (a de data mais próxima). Nome com _, descriçêo que diz o que nêo faz, schema fechado.",
           "pronto": "<code>node scripts/executar.mjs nativo [nome] '{}'</code> → <code>resultado (string):</code> com o JSON esperado e <code>saída: 0</code>."
         }
       ]
@@ -165,7 +165,7 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
           "p": "O que executeTool devolve na spec de 16/10/2026?",
@@ -188,7 +188,7 @@
             "buscar-oficinas-v2"
           ],
           "certa": 2,
-          "explica": "O nome aceita de 1 a 128 caracteres: letras e números ASCII, _ - e ponto. Espaço não entra, e o registro rejeita com InvalidStateError.",
+          "explica": "O nome aceita de 1 a 128 caracteres: letras e números ASCII, _ - e ponto. Espaço nêo entra, e o registro rejeita com InvalidStateError.",
           "ref": "diagrama"
         },
         {
@@ -200,7 +200,7 @@
             "Porque getTools só lista ferramentas visuais."
           ],
           "certa": 1,
-          "explica": "Agente e pessoa trabalham na mesma página. Se o agente busca e a tela não muda, a pessoa perde o fio. A spec não obriga; é decisão de desenho do kit.",
+          "explica": "Agente e pessoa trabalham na mesma página. Se o agente busca e a tela nêo muda, a pessoa perde o fio. A spec nêo obriga; é decisêo de desenho do kit.",
           "ref": "codigo"
         },
         {
@@ -212,7 +212,7 @@
             "Dá TypeError: a entrada tem de ser objeto."
           ],
           "certa": 3,
-          "explica": "A entrada é object na spec. O contorno com texto era de uma implementação de setembro e hoje dá TypeError no nativo e no polyfill (medido em 19/10/2026).",
+          "explica": "A entrada é object na spec. O contorno com texto era de uma implementaçêo de setembro e hoje dá TypeError no nativo e no polyfill (medido em 19/10/2026).",
           "ref": "codigo"
         }
       ]
@@ -222,7 +222,7 @@
       "titulo": "Em três frases",
       "itens": [
         {
-          "t": "Definição",
+          "t": "Definiçêo",
           "texto": "name com regra, description clara, inputSchema fechado e execute que devolve um objeto."
         },
         {

@@ -95,7 +95,7 @@
         {
           "rot": "Excerpt · kit/pagina/ferramentas.mjs",
           "icone": "arquivo",
-          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina não encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // humano decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
+          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina nêo encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // humano decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
         },
         {
           "rot": "Terminal · decline and confirm",
@@ -112,7 +112,7 @@
           },
           {
             "rot": "Common mistake: trusting only the annotation",
-            "html": "<p>Marking <code>consequentialHint: true</code> and saving straight in execute leaves the decision to the agent. Lesson 8 shows the test battery catching exactly this: with the confirmation swapped for <code>const ok = true</code>, the check \"reserva recusada na tela não reserva\" fails.</p>"
+            "html": "<p>Marking <code>consequentialHint: true</code> and saving straight in execute leaves the decision to the agent. Lesson 8 shows the test battery catching exactly this: with the confirmation swapped for <code>const ok = true</code>, the check \"reserva recusada na tela nêo reserva\" fails.</p>"
           }
         ]
       }

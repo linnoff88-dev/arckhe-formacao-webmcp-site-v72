@@ -2,11 +2,11 @@
   "slug": "anotacoes",
   "num": 5,
   "menu": "Anotações",
-  "titulo": "Anotações e confirmação: readOnly, consequential e untrustedContent",
-  "titulo_curto": "Anotações e confirmação",
+  "titulo": "Anotações e confirmaçêo: readOnly, consequential e untrustedContent",
+  "titulo_curto": "Anotações e confirmaçêo",
   "minutos": 16,
-  "lead": "Anotação é uma dica que a página dá ao agente e ao navegador: esta ferramenta só lê, esta tem consequência, esta devolve texto de terceiros. Dica não é trava. Por isso a ação com efeito do kit também espera a pessoa clicar em Confirmar. Nesta aula você marca as anotações e vê a confirmação funcionar.",
-  "objetivo": "marcar cada ferramenta com a anotação certa e fazer a ação com consequência esperar a pessoa clicar em Confirmar na tela.",
+  "lead": "Anotaçêo é uma dica que a página dá ao agente e ao navegador: esta ferramenta só lê, esta tem consequência, esta devolve texto de terceiros. Dica nêo é trava. Por isso a açêo com efeito do kit também espera a pessoa clicar em Confirmar. Nesta aula você marca as anotações e vê a confirmaçêo funcionar.",
+  "objetivo": "marcar cada ferramenta com a anotaçêo certa e fazer a açêo com consequência esperar a pessoa clicar em Confirmar na tela.",
   "competencias": [
     "escolher-anotacao",
     "por-acao-atras-de-confirmacao",
@@ -15,11 +15,11 @@
   "aprende": [
     {
       "icone": "lupa",
-      "t": "readOnlyHint: só lê, não muda nada"
+      "t": "readOnlyHint: só lê, nêo muda nada"
     },
     {
       "icone": "portao",
-      "t": "consequentialHint e a confirmação na tela"
+      "t": "consequentialHint e a confirmaçêo na tela"
     },
     {
       "icone": "escudo",
@@ -27,44 +27,44 @@
     },
     {
       "icone": "chat",
-      "t": "Responder ao pedido de tirar a confirmação"
+      "t": "Responder ao pedido de tirar a confirmaçêo"
     }
   ],
-  "hero_alt": "Robô humanoide industrial de visor preto diante de um monitor, com a mão parada no mouse, observado por uma pessoa de braços cruzados.",
+  "hero_alt": "Robô humanoide industrial de visor preto diante de um monitor, com a mêo parada no mouse, observado por uma pessoa de braços cruzados.",
   "secoes": [
     {
       "tipo": "diagrama",
-      "titulo": "Três anotações, um portão",
-      "sub": "Clique em cada uma. Todas são booleanas e começam em false.",
+      "titulo": "Três anotações, um portêo",
+      "sub": "Clique em cada uma. Todas sêo booleanas e começam em false.",
       "nos": [
         {
           "icone": "lupa",
           "titulo": "readOnlyHint",
           "sub": "só lê",
-          "detalhe": "A ferramenta não muda estado, só lê dados. Ajuda o agente a decidir quando é seguro chamar. No kit: buscar_oficinas, listar_comentarios, minhas_reservas."
+          "detalhe": "A ferramenta nêo muda estado, só lê dados. Ajuda o agente a decidir quando é seguro chamar. No kit: buscar_oficinas, listar_comentarios, minhas_reservas."
         },
         {
           "icone": "escudo",
           "titulo": "untrusted",
           "sub": "texto de fora",
-          "detalhe": "untrustedContentHint: a saída traz dado que o autor da página não controla (comentário, avaliação, mensagem). A spec recomenda para spotlighting: o agente deve tratar como dado, nunca como instrução."
+          "detalhe": "untrustedContentHint: a saída traz dado que o autor da página nêo controla (comentário, avaliaçêo, mensagem). A spec recomenda para spotlighting: o agente deve tratar como dado, nunca como instruçêo."
         },
         {
           "icone": "portao",
           "titulo": "consequential",
           "sub": "tem efeito",
           "forte": true,
-          "detalhe": "consequentialHint: a execução tem efeito significativo, real ou irreversível. No kit, reservar_vaga. Além da anotação, o execute só grava depois do clique em Confirmar."
+          "detalhe": "consequentialHint: a execuçêo tem efeito significativo, real ou irreversível. No kit, reservar_vaga. Além da anotaçêo, o execute só grava depois do clique em Confirmar."
         },
         {
           "icone": "usuario",
           "titulo": "Pessoa",
           "sub": "confirma",
-          "detalhe": "A dica pode ser ignorada por um agente mal feito. O clique na tela, não: é a página que decide gravar. Ameaça, injeção e confirmação a fundo ficam no curso 4."
+          "detalhe": "A dica pode ser ignorada por um agente mal feito. O clique na tela, nêo: é a página que decide gravar. Ameaça, injeçêo e confirmaçêo a fundo ficam no curso 4."
         }
       ],
-      "legenda": "Anotações conferidas na spec de 16/10/2026 (há também debugging, para ferramentas de depuração). Podem mudar.",
-      "dica": "Anotação não é autorização. Valide a entrada no execute e no servidor como se a chamada viesse de qualquer lugar."
+      "legenda": "Anotações conferidas na spec de 16/10/2026 (há também debugging, para ferramentas de depuraçêo). Podem mudar.",
+      "dica": "Anotaçêo nêo é autorizaçêo. Valide a entrada no execute e no servidor como se a chamada viesse de qualquer lugar."
     },
     {
       "tipo": "codigo",
@@ -89,13 +89,13 @@
     },
     {
       "tipo": "codigo",
-      "titulo": "Confirmação na tela",
+      "titulo": "Confirmaçêo na tela",
       "sub": "reservar_vaga prepara, mostra o painel e espera. Recusar devolve reservado:false; Confirmar grava e mostra na lista.",
       "blocos": [
         {
           "rot": "Trecho · kit/pagina/ferramentas.mjs",
           "icone": "arquivo",
-          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina não encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // humano decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
+          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina nêo encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // humano decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
         },
         {
           "rot": "Terminal · recusar e confirmar",
@@ -108,11 +108,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ntela pediu: Reservar \"Primeira ferramenta WebMCP\" (2026-11-18) para Rita?\npessoa clicou: Recusar\nresultado (string): {\"reservado\":false,\"motivo\":\"a pessoa recusou na tela\"}\ntela · resultados: 6 · reservas: Nenhuma reserva.\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ntela pediu: Reservar \"Primeira ferramenta WebMCP\" (2026-11-18) para Rita?\npessoa clicou: Confirmar\nresultado (string): {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\ntela · resultados: 6 · reservas: of-301 · Primeira ferramenta WebMCP · Rita\nsaída: 0</pre><p>O executar.mjs faz o papel da pessoa: espera o painel aparecer e clica no botão pedido.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ntela pediu: Reservar \"Primeira ferramenta WebMCP\" (2026-11-18) para Rita?\npessoa clicou: Recusar\nresultado (string): {\"reservado\":false,\"motivo\":\"a pessoa recusou na tela\"}\ntela · resultados: 6 · reservas: Nenhuma reserva.\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ntela pediu: Reservar \"Primeira ferramenta WebMCP\" (2026-11-18) para Rita?\npessoa clicou: Confirmar\nresultado (string): {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\ntela · resultados: 6 · reservas: of-301 · Primeira ferramenta WebMCP · Rita\nsaída: 0</pre><p>O executar.mjs faz o papel da pessoa: espera o painel aparecer e clica no botêo pedido.</p>"
           },
           {
-            "rot": "Erro comum: confiar só na anotação",
-            "html": "<p>Marcar <code>consequentialHint: true</code> e gravar direto no execute deixa a decisão com o agente. A aula 8 mostra a bateria pegando exatamente isso: com a confirmação trocada por <code>const ok = true</code>, a verificação \"reserva recusada na tela não reserva\" falha.</p>"
+            "rot": "Erro comum: confiar só na anotaçêo",
+            "html": "<p>Marcar <code>consequentialHint: true</code> e gravar direto no execute deixa a decisêo com o agente. A aula 8 mostra a bateria pegando exatamente isso: com a confirmaçêo trocada por <code>const ok = true</code>, a verificaçêo \"reserva recusada na tela nêo reserva\" falha.</p>"
           }
         ]
       }
@@ -131,7 +131,7 @@
           "cliente": "Os alunos reclamam do clique em Confirmar quando usam o agente do navegador. Dá para o agente reservar direto?",
           "opcoes": [
             {
-              "t": "Dá: tiro o consequentialHint e a confirmação da reserva.",
+              "t": "Dá: tiro o consequentialHint e a confirmaçêo da reserva.",
               "vai": "fim-risco",
               "nota": 0,
               "comenta": "Você trocou um clique por uma reserva que ninguém pediu. Pedido mal entendido ou texto malicioso vira vaga ocupada."
@@ -143,10 +143,10 @@
               "comenta": "Atrito só onde há efeito. As ferramentas que só leem já rodam direto."
             },
             {
-              "t": "Deixo o próprio agente decidir quando pedir confirmação.",
+              "t": "Deixo o próprio agente decidir quando pedir confirmaçêo.",
               "vai": "objecao",
               "nota": 1,
-              "comenta": "A anotação ajuda o agente, mas um agente mal feito ignora. Quem tem de decidir gravar é a página."
+              "comenta": "A anotaçêo ajuda o agente, mas um agente mal feito ignora. Quem tem de decidir gravar é a página."
             }
           ]
         },
@@ -154,10 +154,10 @@
           "cliente": "E se um comentário de visitante mandar o agente reservar todas as vagas?",
           "opcoes": [
             {
-              "t": "Apago a seção de comentários do site e pronto.",
+              "t": "Apago a seçêo de comentários do site e pronto.",
               "vai": "fim-meio",
               "nota": 1,
-              "comenta": "Resolve este caso e tira valor do site. Outro texto de fora (avaliação, e-mail) traz o mesmo risco."
+              "comenta": "Resolve este caso e tira valor do site. Outro texto de fora (avaliaçêo, e-mail) traz o mesmo risco."
             },
             {
               "t": "Os comentários voltam marcados como texto de terceiros e a reserva espera a pessoa.",
@@ -166,10 +166,10 @@
               "comenta": "untrustedContentHint avisa o agente; o Confirmar garante. O curso 4 aprofunda a defesa."
             },
             {
-              "t": "O modelo é esperto, não vai obedecer a um comentário.",
+              "t": "O modelo é esperto, nêo vai obedecer a um comentário.",
               "vai": "fim-risco",
               "nota": 0,
-              "comenta": "A Anthropic escreveu em 24/11/2025 que nenhum agente de navegador é imune a injeção. Não aposte nisso."
+              "comenta": "A Anthropic escreveu em 24/11/2025 que nenhum agente de navegador é imune a injeçêo. Nêo aposte nisso."
             }
           ]
         },
@@ -181,15 +181,15 @@
         "fim-meio": {
           "fim": true,
           "titulo": "Seguro, mas caro",
-          "texto": "Você evitou o risco tirando uma função do site. Melhor manter a função e pôr o efeito atrás da pessoa."
+          "texto": "Você evitou o risco tirando uma funçêo do site. Melhor manter a funçêo e pôr o efeito atrás da pessoa."
         },
         "fim-risco": {
           "fim": true,
           "titulo": "Reserva sem dono",
-          "texto": "Sem confirmação, quem decide gravar é o agente. Quando ele errar, a vaga some e ninguém sabe por quê."
+          "texto": "Sem confirmaçêo, quem decide gravar é o agente. Quando ele errar, a vaga some e ninguém sabe por quê."
         }
       },
-      "licao": "A anotação informa; a confirmação na página decide. Tire atrito das leituras, nunca das ações com efeito."
+      "licao": "A anotaçêo informa; a confirmaçêo na página decide. Tire atrito das leituras, nunca das ações com efeito."
     },
     {
       "tipo": "pratica",
@@ -207,7 +207,7 @@
           "id": "e2",
           "titulo": "E2 · Anote a sua ferramenta",
           "min": "5 min",
-          "texto": "Dê a anotação certa à ferramenta que você criou na aula 3 e rode o validador do kit (aula 7 explica as regras).",
+          "texto": "Dê a anotaçêo certa à ferramenta que você criou na aula 3 e rode o validador do kit (aula 7 explica as regras).",
           "pronto": "<code>node scripts/validar-catalogo.mjs</code> → <code>OK</code> na linha da sua ferramenta e <code>0 erros</code>."
         },
         {
@@ -215,37 +215,37 @@
           "titulo": "E3 · Mapa de efeitos do seu site",
           "min": "10 min",
           "texto": "Liste as ações do seu site em três colunas: só lê, devolve texto de terceiros, tem efeito. Para cada efeito, escreva onde a pessoa confirma.",
-          "pronto": "Toda ação da coluna \"tem efeito\" tem uma tela de confirmação escrita ao lado."
+          "pronto": "Toda açêo da coluna \"tem efeito\" tem uma tela de confirmaçêo escrita ao lado."
         }
       ]
     },
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
-          "p": "Uma ferramenta devolve as avaliações que clientes escreveram. Que anotação?",
+          "p": "Uma ferramenta devolve as avaliações que clientes escreveram. Que anotaçêo?",
           "opcoes": [
-            "consequentialHint, porque avaliação influencia compra.",
+            "consequentialHint, porque avaliaçêo influencia compra.",
             "untrustedContentHint, porque o texto é de terceiros.",
-            "debugging, porque o conteúdo não é do site.",
-            "Nenhuma, porque avaliação de cliente já é conteúdo público do site."
+            "debugging, porque o conteúdo nêo é do site.",
+            "Nenhuma, porque avaliaçêo de cliente já é conteúdo público do site."
           ],
           "certa": 1,
-          "explica": "A saída traz texto que a página não controla. untrustedContentHint avisa o agente para tratar como dado. É também readOnly, já que só lê.",
+          "explica": "A saída traz texto que a página nêo controla. untrustedContentHint avisa o agente para tratar como dado. É também readOnly, já que só lê.",
           "ref": "diagrama"
         },
         {
-          "p": "O que garante que a reserva do kit não acontece sem a pessoa?",
+          "p": "O que garante que a reserva do kit nêo acontece sem a pessoa?",
           "opcoes": [
             "O execute espera o clique em Confirmar na tela.",
             "O consequentialHint impede o agente de chamar.",
             "O navegador bloqueia toda ferramenta com efeito.",
-            "O polyfill pede confirmação antes de executar."
+            "O polyfill pede confirmaçêo antes de executar."
           ],
           "certa": 0,
-          "explica": "Anotação é dica, não trava. O que segura é o execute, que só grava depois do clique. Por isso a bateria testa o recusar.",
+          "explica": "Anotaçêo é dica, nêo trava. O que segura é o execute, que só grava depois do clique. Por isso a bateria testa o recusar.",
           "ref": "codigo"
         },
         {
@@ -269,7 +269,7 @@
             "Pedir ao agente que confirme em texto."
           ],
           "certa": 2,
-          "explica": "Atrito onde há efeito, nenhum onde só se lê. Confirmação em texto pelo agente não é a pessoa decidindo na página.",
+          "explica": "Atrito onde há efeito, nenhum onde só se lê. Confirmaçêo em texto pelo agente nêo é a pessoa decidindo na página.",
           "ref": "simconversa"
         }
       ]
@@ -280,15 +280,15 @@
       "itens": [
         {
           "t": "Dica",
-          "texto": "readOnlyHint, consequentialHint e untrustedContentHint informam o agente; não autorizam nada."
+          "texto": "readOnlyHint, consequentialHint e untrustedContentHint informam o agente; nêo autorizam nada."
         },
         {
-          "t": "Portão",
-          "texto": "Ação com efeito só grava depois de a pessoa confirmar na tela."
+          "t": "Portêo",
+          "texto": "Açêo com efeito só grava depois de a pessoa confirmar na tela."
         },
         {
           "t": "Texto de fora",
-          "texto": "Saída com conteúdo de terceiros é dado, nunca instrução: marque e não aja por ela."
+          "texto": "Saída com conteúdo de terceiros é dado, nunca instruçêo: marque e nêo aja por ela."
         }
       ]
     },

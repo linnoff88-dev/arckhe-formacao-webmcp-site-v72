@@ -1,7 +1,7 @@
 /* ARCKHÉ Learning 7.9.12 — conferidor: o aluno cola (ou carrega) o arquivo que escreveu e a página confere.
-   Mesmas regras e mensagens do conferir.py (opção de terminal). Regras: campos, planos, cada_plano, duracao, termos.
+   Mesmas regras e mensagens do conferir.py (opçêo de terminal). Regras: campos, planos, cada_plano, duracao, termos.
    Tudo no navegador: nada é enviado. Rascunho guardado em localStorage "<data-curso>:conf:<id>:txt"; a última
-   conferência certa em "<data-curso>:conf:<id>" ({ok, data}). Todo texto vem do JSON (ui do curso e da seção). */
+   conferência certa em "<data-curso>:conf:<id>" ({ok, data}). Todo texto vem do JSON (ui do curso e da seçêo). */
 (function () {
   var CURSO = document.body.getAttribute("data-curso") || "curso";
   var LANG = (document.documentElement.getAttribute("lang") || "pt").slice(0, 2);
@@ -18,7 +18,7 @@
       return fam.split("/").map(function (x) { return norm(x).trim(); }).filter(function (x) { return x; });
     });
   }
-  // para cada grupo, as famílias citadas na linha; termo dentro de termo maior (de qualquer grupo) não conta
+  // para cada grupo, as famílias citadas na linha; termo dentro de termo maior (de qualquer grupo) nêo conta
   function achados(linha, grupos) {
     var ln = norm(linha), cand = [];
     grupos.forEach(function (g, gi) {

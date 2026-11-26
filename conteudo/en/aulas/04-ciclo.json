@@ -88,7 +88,7 @@
         "abas": [
           {
             "rot": "Captured output (October 19, 2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecução cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecução cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolchange\nsaída: 0</pre><p>Same sequence in both. The difference is in the \"eventos\" line: only native fires toolactivated and toolcancel.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecuçêo cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecuçêo cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolchange\nsaída: 0</pre><p>Same sequence in both. The difference is in the \"eventos\" line: only native fires toolactivated and toolcancel.</p>"
           },
           {
             "rot": "Common mistake: an execute that ignores the signal",
@@ -150,7 +150,7 @@
           "titulo": "E1 · Cycle in native",
           "min": "3 min",
           "texto": "Run the cycle block and read it line by line.",
-          "pronto": "<code>node scripts/ciclo.mjs nativo</code> → <code>nome repetido: recusado (InvalidStateError)</code>, <code>execução cancelada pelo chamador: AbortError</code>, <code>depois do abort(): 4 ferramentas</code> and <code>eventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange</code>."
+          "pronto": "<code>node scripts/ciclo.mjs nativo</code> → <code>nome repetido: recusado (InvalidStateError)</code>, <code>execuçêo cancelada pelo chamador: AbortError</code>, <code>depois do abort(): 4 ferramentas</code> and <code>eventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange</code>."
         },
         {
           "id": "e2",

@@ -5,8 +5,8 @@
   "titulo": "Ciclo de vida: getTools, toolchange, AbortSignal e cancelamento",
   "titulo_curto": "Ciclo de vida",
   "minutos": 15,
-  "lead": "Ferramenta não é para sempre: a página registra quando a função existe e remove quando sai de cena. Na spec de 16/10/2026 não há unregisterTool; quem remove é o signal de um AbortController. E quem chama pode cancelar uma execução no meio. Nesta aula você vê o ciclo inteiro e os eventos que o navegador dispara.",
-  "objetivo": "registrar, listar, remover com AbortSignal e cancelar uma execução, sabendo quais eventos o navegador dispara em cada passo.",
+  "lead": "Ferramenta nêo é para sempre: a página registra quando a funçêo existe e remove quando sai de cena. Na spec de 16/10/2026 nêo há unregisterTool; quem remove é o signal de um AbortController. E quem chama pode cancelar uma execuçêo no meio. Nesta aula você vê o ciclo inteiro e os eventos que o navegador dispara.",
+  "objetivo": "registrar, listar, remover com AbortSignal e cancelar uma execuçêo, sabendo quais eventos o navegador dispara em cada passo.",
   "competencias": [
     "remover-com-abortsignal",
     "cancelar-execucao",
@@ -23,14 +23,14 @@
     },
     {
       "icone": "relogio",
-      "t": "Cancelar uma execução: signal no execute e no executeTool"
+      "t": "Cancelar uma execuçêo: signal no execute e no executeTool"
     },
     {
       "icone": "lista",
-      "t": "toolactivated e toolcancel: nativo dispara, polyfill não"
+      "t": "toolactivated e toolcancel: nativo dispara, polyfill nêo"
     }
   ],
-  "hero_alt": "Painel de conexões escuro com alguns cabos ligados e uma mão puxando um deles para fora.",
+  "hero_alt": "Painel de conexões escuro com alguns cabos ligados e uma mêo puxando um deles para fora.",
   "secoes": [
     {
       "tipo": "diagrama",
@@ -47,7 +47,7 @@
           "icone": "play",
           "titulo": "Executar",
           "sub": "toolactivated",
-          "detalhe": "Quando a execução começa, o ModelContext dispara toolactivated com toolName. O execute recebe { signal } próprio da chamada."
+          "detalhe": "Quando a execuçêo começa, o ModelContext dispara toolactivated com toolName. O execute recebe { signal } próprio da chamada."
         },
         {
           "icone": "relogio",
@@ -63,9 +63,9 @@
           "detalhe": "O abort() do controller usado no registro tira a ferramenta (toolchange de novo). É o que o kit faz no pagehide e o que um componente faz ao desmontar."
         }
       ],
-      "volta": "Registrar de novo quando a função voltar (outra rota, outro estado)",
+      "volta": "Registrar de novo quando a funçêo voltar (outra rota, outro estado)",
       "legenda": "Medido em 19/10/2026: o Chromium 156 dispara os três eventos; o polyfill 6.0.3 só toolchange.",
-      "dica": "Doc do Chrome: window.ontoolactivated e window.ontoolcancel não têm suporte desde o 156. Ouça no document.modelContext."
+      "dica": "Doc do Chrome: window.ontoolactivated e window.ontoolcancel nêo têm suporte desde o 156. Ouça no document.modelContext."
     },
     {
       "tipo": "codigo",
@@ -75,7 +75,7 @@
         {
           "rot": "Trecho simplificado · kit/scripts/ciclo.mjs",
           "icone": "arquivo",
-          "conteudo": "const registro = new AbortController();\nawait mc.registerTool({\n  name: 'tarefa_lenta', description: 'Leva 2 segundos. Existe só para ensinar cancelamento.',\n  async execute(_, { signal }) {\n    return new Promise((ok, falha) => {\n      const t = setTimeout(() => ok({ terminou: true }), 2000);\n      signal.addEventListener('abort', () => { clearTimeout(t); falha(new DOMException('cancelada', 'AbortError')); });\n    });\n  }\n}, { signal: registro.signal });\n\nconst t = (await mc.getTools()).find(x => x.name === 'tarefa_lenta');\nconst chamada = new AbortController();\nsetTimeout(() => chamada.abort(), 100);\ntry { await mc.executeTool(t, {}, { signal: chamada.signal }); }\ncatch (e) { /* AbortError */ }\n\nregistro.abort();   // remove a ferramenta: não existe unregisterTool"
+          "conteudo": "const registro = new AbortController();\nawait mc.registerTool({\n  name: 'tarefa_lenta', description: 'Leva 2 segundos. Existe só para ensinar cancelamento.',\n  async execute(_, { signal }) {\n    return new Promise((ok, falha) => {\n      const t = setTimeout(() => ok({ terminou: true }), 2000);\n      signal.addEventListener('abort', () => { clearTimeout(t); falha(new DOMException('cancelada', 'AbortError')); });\n    });\n  }\n}, { signal: registro.signal });\n\nconst t = (await mc.getTools()).find(x => x.name === 'tarefa_lenta');\nconst chamada = new AbortController();\nsetTimeout(() => chamada.abort(), 100);\ntry { await mc.executeTool(t, {}, { signal: chamada.signal }); }\ncatch (e) { /* AbortError */ }\n\nregistro.abort();   // remove a ferramenta: nêo existe unregisterTool"
         },
         {
           "rot": "Terminal · ciclo no nativo e no polyfill",
@@ -88,11 +88,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecução cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecução cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolchange\nsaída: 0</pre><p>Mesma sequência nos dois. A diferença está na linha \"eventos\": só o nativo dispara toolactivated e toolcancel.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecuçêo cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nantes: 4 ferramentas\nregistrou tarefa_lenta: 5 ferramentas\nnome repetido: recusado (InvalidStateError)\nexecuçêo cancelada pelo chamador: AbortError\ndepois do abort(): 4 ferramentas\neventos: toolchange toolchange\nsaída: 0</pre><p>Mesma sequência nos dois. A diferença está na linha \"eventos\": só o nativo dispara toolactivated e toolcancel.</p>"
           },
           {
             "rot": "Erro comum: execute que ignora o signal",
-            "html": "<p>Se o execute não ouve <code>signal</code>, o cancelamento rejeita a chamada, mas o trabalho continua: o setTimeout dispara, o fetch completa, a reserva acontece. Em ferramenta com efeito, confira <code>signal.aborted</code> antes de gravar.</p>"
+            "html": "<p>Se o execute nêo ouve <code>signal</code>, o cancelamento rejeita a chamada, mas o trabalho continua: o setTimeout dispara, o fetch completa, a reserva acontece. Em ferramenta com efeito, confira <code>signal.aborted</code> antes de gravar.</p>"
           }
         ]
       }
@@ -127,7 +127,7 @@
           "sub": "efeito",
           "texto": [
             "Em React, registre no efeito e aborte no cleanup; o modo estrito monta duas vezes e o nome repetido daria InvalidStateError.",
-            "O padrão vale para outros frameworks; a aula 7 mostra o modelo."
+            "O padrêo vale para outros frameworks; a aula 7 mostra o modelo."
           ]
         },
         {
@@ -150,13 +150,13 @@
           "titulo": "E1 · Ciclo no nativo",
           "min": "3 min",
           "texto": "Rode o bloco do ciclo e leia linha a linha.",
-          "pronto": "<code>node scripts/ciclo.mjs nativo</code> → <code>nome repetido: recusado (InvalidStateError)</code>, <code>execução cancelada pelo chamador: AbortError</code>, <code>depois do abort(): 4 ferramentas</code> e <code>eventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange</code>."
+          "pronto": "<code>node scripts/ciclo.mjs nativo</code> → <code>nome repetido: recusado (InvalidStateError)</code>, <code>execuçêo cancelada pelo chamador: AbortError</code>, <code>depois do abort(): 4 ferramentas</code> e <code>eventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange</code>."
         },
         {
           "id": "e2",
           "titulo": "E2 · A diferença do polyfill",
           "min": "3 min",
-          "texto": "Rode o mesmo no polyfill e anote no seu status-webmcp.md (aula 1) o que o polyfill não faz.",
+          "texto": "Rode o mesmo no polyfill e anote no seu status-webmcp.md (aula 1) o que o polyfill nêo faz.",
           "pronto": "<code>node scripts/ciclo.mjs polyfill</code> → <code>eventos: toolchange toolchange</code> e <code>saída: 0</code>; a linha está no seu arquivo."
         },
         {
@@ -171,7 +171,7 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
           "p": "Como se remove uma ferramenta na spec de 16/10/2026?",
@@ -182,19 +182,19 @@
             "Abortando o AbortController passado no registro."
           ],
           "certa": 3,
-          "explica": "registerTool(def, { signal }) e depois abort(). unregisterTool, provideContext e clearContext não existem na spec atual.",
+          "explica": "registerTool(def, { signal }) e depois abort(). unregisterTool, provideContext e clearContext nêo existem na spec atual.",
           "ref": "diagrama"
         },
         {
-          "p": "Quem chama aborta a execução. O que acontece com o execute?",
+          "p": "Quem chama aborta a execuçêo. O que acontece com o execute?",
           "opcoes": [
-            "Nada: o execute não fica sabendo.",
+            "Nada: o execute nêo fica sabendo.",
             "O signal do execute fica aborted; ele deve parar.",
             "O navegador mata a aba para garantir.",
             "O execute recomeça do zero com a mesma entrada."
           ],
           "certa": 1,
-          "explica": "O execute recebe { signal } próprio da chamada. Se ele não ouvir, o trabalho segue apesar da rejeição: confira signal.aborted antes de gravar.",
+          "explica": "O execute recebe { signal } próprio da chamada. Se ele nêo ouvir, o trabalho segue apesar da rejeiçêo: confira signal.aborted antes de gravar.",
           "ref": "codigo"
         },
         {
@@ -202,18 +202,18 @@
           "opcoes": [
             "Passa: o polyfill dispara os mesmos eventos.",
             "Passa, mas o evento chega com outro nome e o teste precisa mudar.",
-            "Falha: o polyfill não dispara toolactivated.",
-            "Falha: o polyfill não dispara toolchange."
+            "Falha: o polyfill nêo dispara toolactivated.",
+            "Falha: o polyfill nêo dispara toolchange."
           ],
           "certa": 2,
-          "explica": "Medido em 19/10/2026: o polyfill dispara só toolchange. Por isso a bateria do kit testa nos dois modos e não depende de toolactivated.",
+          "explica": "Medido em 19/10/2026: o polyfill dispara só toolchange. Por isso a bateria do kit testa nos dois modos e nêo depende de toolactivated.",
           "ref": "codigo"
         },
         {
           "p": "Num componente React, onde vai o abort()?",
           "opcoes": [
             "No cleanup do efeito que registrou.",
-            "No onClick do botão de enviar, logo depois de gravar o formulário.",
+            "No onClick do botêo de enviar, logo depois de gravar o formulário.",
             "Em lugar nenhum: o navegador limpa sozinho.",
             "No construtor, antes de registrar."
           ],
@@ -229,7 +229,7 @@
       "itens": [
         {
           "t": "Remover",
-          "texto": "Signal no registro e abort() quando a função sai de cena; não existe unregisterTool."
+          "texto": "Signal no registro e abort() quando a funçêo sai de cena; nêo existe unregisterTool."
         },
         {
           "t": "Cancelar",

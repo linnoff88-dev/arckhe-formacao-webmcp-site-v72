@@ -4,7 +4,7 @@ cat > $E/extras.mjs <<'FIM'
 export function extras(agenda) {
   return [{
     name: 'contar_vagas',
-    description: 'Soma as vagas livres das oficinas de um tema. Só lê: não reserva nada.',
+    description: 'Soma as vagas livres das oficinas de um tema. Só lê: nêo reserva nada.',
     inputSchema: {
       type: 'object',
       properties: { tema: { type: 'string', enum: ['html', 'javascript', 'webmcp', 'mcp'], description: 'Tema da oficina.' } },

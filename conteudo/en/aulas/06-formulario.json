@@ -92,7 +92,7 @@
         "abas": [
           {
             "rot": "Captured output (October 19, 2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? não, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? não, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0</pre><p>The search returns right away (toolautosubmit). The booking stays filled in and paused until the click: declarativa.mjs plays the part of the person.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: nativo\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? nêo, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\nferramenta do formulário: buscar_oficinas_form · campos: tema\nferramenta do formulário: reservar_vaga_form · campos: id, nome\nbuscar_oficinas_form (toolautosubmit): {\"total\":1,\"ids\":[\"of-301\"]}\nreservar_vaga_form preencheu: id=of-301 nome=Rita · enviado? nêo, esperando a pessoa\npessoa clicou em Reservar → {\"reservado\":true,\"reserva\":{\"id\":\"of-301\",\"nome\":\"Rita\",\"titulo\":\"Primeira ferramenta WebMCP\"}}\nsaída: 0</pre><p>The search returns right away (toolautosubmit). The booking stays filled in and paused until the click: declarativa.mjs plays the part of the person.</p>"
           },
           {
             "rot": "Common mistake: toolautosubmit on everything",
@@ -111,7 +111,7 @@
           "titulo": "E1 · The two forms",
           "min": "4 min",
           "texto": "Run the block and compare the search and booking lines.",
-          "pronto": "<code>node scripts/declarativa.mjs nativo</code> → <code>enviado? não, esperando a pessoa</code> and <code>pessoa clicou em Reservar → {\"reservado\":true,</code> and <code>saída: 0</code>."
+          "pronto": "<code>node scripts/declarativa.mjs nativo</code> → <code>enviado? nêo, esperando a pessoa</code> and <code>pessoa clicou em Reservar → {\"reservado\":true,</code> and <code>saída: 0</code>."
         },
         {
           "id": "e2",

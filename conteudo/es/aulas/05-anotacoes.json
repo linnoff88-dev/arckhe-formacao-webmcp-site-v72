@@ -95,7 +95,7 @@
         {
           "rot": "Fragmento · kit/pagina/ferramentas.mjs",
           "icone": "arquivo",
-          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina não encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // la persona decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
+          "conteudo": "annotations: { consequentialHint: true },\nexecute: comErroUtil(async ({ id, nome }, { signal }) => {\n  const oficina = agenda.oficina(id);\n  if (!oficina) throw new Error(`oficina nêo encontrada: ${id}`);\n  const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);   // la persona decide\n  if (!ok) return { reservado: false, motivo: 'a pessoa recusou na tela' };\n  const reserva = agenda.reservar({ id, nome });\n  ui.mostrarReservas();\n  return { reservado: true, reserva };\n})"
         },
         {
           "rot": "Terminal · recusar y confirmar",
@@ -112,7 +112,7 @@
           },
           {
             "rot": "Error común: confiar solo en la anotación",
-            "html": "<p>Marcar <code>consequentialHint: true</code> y guardar directo en el execute deja la decisión en manos del agente. La clase 8 muestra la batería detectando justo eso: con la confirmación cambiada por <code>const ok = true</code>, la verificación \"reserva recusada na tela não reserva\" falla.</p>"
+            "html": "<p>Marcar <code>consequentialHint: true</code> y guardar directo en el execute deja la decisión en manos del agente. La clase 8 muestra la batería detectando justo eso: con la confirmación cambiada por <code>const ok = true</code>, la verificación \"reserva recusada na tela nêo reserva\" falla.</p>"
           }
         ]
       }

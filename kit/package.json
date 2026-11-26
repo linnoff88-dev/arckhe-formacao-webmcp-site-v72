@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Kit do curso WebMCP no seu site (Formação WebMCP, ARCKHÉ AI). Página de exemplo com ferramentas WebMCP, fallback e testes. Versões fixadas em 19/10/2026.",
+  "description": "Kit do curso WebMCP no seu site (Formaçêo WebMCP, ARCKHÉ AI). Página de exemplo com ferramentas WebMCP, fallback e testes. Versões fixadas em 19/10/2026.",
   "scripts": {
     "postinstall": "node scripts/copiar-polyfill.mjs",
     "servir": "node scripts/servir.mjs",

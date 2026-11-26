@@ -2,7 +2,7 @@
 antes: 4 ferramentas
 registrou tarefa_lenta: 5 ferramentas
 nome repetido: recusado (InvalidStateError)
-execução cancelada pelo chamador: AbortError
+execuçêo cancelada pelo chamador: AbortError
 depois do abort(): 4 ferramentas
 eventos: toolchange toolactivated:tarefa_lenta toolcancel:tarefa_lenta toolchange
 saída: 0
@@ -10,7 +10,7 @@ saída: 0
 antes: 4 ferramentas
 registrou tarefa_lenta: 5 ferramentas
 nome repetido: recusado (InvalidStateError)
-execução cancelada pelo chamador: AbortError
+execuçêo cancelada pelo chamador: AbortError
 depois do abort(): 4 ferramentas
 eventos: toolchange toolchange
 saída: 0

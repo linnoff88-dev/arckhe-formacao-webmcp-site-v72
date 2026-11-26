@@ -16,11 +16,11 @@ ok    [polyfill] reserva pelo formulário funciona
 ok    [polyfill] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga
 ok    [polyfill] ferramenta devolve o mesmo que o formulário · of-301
 ok    [polyfill] a tela mostra o que o agente recebeu · of-301
-ok    [polyfill] reserva recusada na tela não reserva
+ok    [polyfill] reserva recusada na tela nêo reserva
 ok    [polyfill] reserva confirmada aparece na tela
 ok    [polyfill] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol
 ok    [polyfill] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x, getTools depois: NotAllowedError
-ok    [polyfill] nenhum erro de JavaScript na sessão do agente
+ok    [polyfill] nenhum erro de JavaScript na sessêo do agente
 == nativo
 ok    [nativo] página sem erro de JavaScript
 ok    [nativo] sem rolagem horizontal em 390 px
@@ -30,10 +30,10 @@ ok    [nativo] reserva pelo formulário funciona
 ok    [nativo] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga
 ok    [nativo] ferramenta devolve o mesmo que o formulário · of-301
 ok    [nativo] a tela mostra o que o agente recebeu · of-301
-ok    [nativo] reserva recusada na tela não reserva
+ok    [nativo] reserva recusada na tela nêo reserva
 ok    [nativo] reserva confirmada aparece na tela
 ok    [nativo] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol
 ok    [nativo] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x
-ok    [nativo] nenhum erro de JavaScript na sessão do agente
+ok    [nativo] nenhum erro de JavaScript na sessêo do agente
 BATERIA: 31/31 ok
 saída: 0

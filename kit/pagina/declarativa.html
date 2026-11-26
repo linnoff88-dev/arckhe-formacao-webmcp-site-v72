@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Formulários que viram ferramentas</h1>
-  <p>API declarativa: <b>experimental, fora da spec de 16/10/2026</b>. O Chrome implementa no origin trial; sem ela, são formulários comuns.</p>
+  <p>API declarativa: <b>experimental, fora da spec de 16/10/2026</b>. O Chrome implementa no origin trial; sem ela, sêo formulários comuns.</p>
 
   <!-- Só lê: pode enviar sozinho (toolautosubmit). -->
   <form id="f-busca" toolname="buscar_oficinas_form" tooldescription="Busca oficinas da agenda por tema. Só lê." toolautosubmit>
@@ -49,7 +49,7 @@
       $('#d-reserva').textContent = r.erro || `Reservado: ${r.reserva.titulo} para ${r.reserva.nome}`;
       if (e.agentInvoked) e.respondWith(Promise.resolve(r));
     });
-    // Ensaio: ?ensaio=polyfill carrega a camada declarativa TEMPORÁRIA do @mcp-b/webmcp-polyfill (nunca em produção).
+    // Ensaio: ?ensaio=polyfill carrega a camada declarativa TEMPORÁRIA do @mcp-b/webmcp-polyfill (nunca em produçêo).
     if (new URLSearchParams(location.search).get('ensaio') === 'polyfill' && !document.modelContext) {
       await new Promise(ok => document.head.append(Object.assign(document.createElement('script'), { src: './vendor/webmcp-polyfill.js', onload: ok, onerror: ok })));
     }

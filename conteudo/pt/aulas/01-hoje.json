@@ -15,7 +15,7 @@
   "aprende": [
     {
       "icone": "arquivo",
-      "t": "O que é um Draft Community Group Report e o que ele não é"
+      "t": "O que é um Draft Community Group Report e o que ele nêo é"
     },
     {
       "icone": "calendario",
@@ -49,7 +49,7 @@
           "titulo": "Rascunho CG",
           "sub": "16/10/2026",
           "forte": true,
-          "detalhe": "Draft Community Group Report do Web Machine Learning CG, de 16/10/2026. O próprio documento diz que não é padrão W3C nem está na trilha de padrões. Editores da Microsoft e do Google; há testes no WPT."
+          "detalhe": "Draft Community Group Report do Web Machine Learning CG, de 16/10/2026. O próprio documento diz que nêo é padrêo W3C nem está na trilha de padrões. Editores da Microsoft e do Google; há testes no WPT."
         },
         {
           "icone": "chip",
@@ -61,10 +61,10 @@
           "icone": "relogio",
           "titulo": "Estável",
           "sub": "sem data",
-          "detalhe": "O Chrome Status ainda marca \"Proposed\" e não há previsão de lançamento estável. O trial acaba no 156, e a API pode mudar antes disso. Já mudou uma vez: navigator.modelContext virou document.modelContext em 19/05/2026."
+          "detalhe": "O Chrome Status ainda marca \"Proposed\" e nêo há previsêo de lançamento estável. O trial acaba no 156, e a API pode mudar antes disso. Já mudou uma vez: navigator.modelContext virou document.modelContext em 19/05/2026."
         }
       ],
-      "legenda": "Rascunho com data, trial com prazo e nenhuma data de estável: por isso o curso ensina a preparar a página com detecção e fallback.",
+      "legenda": "Rascunho com data, trial com prazo e nenhuma data de estável: por isso o curso ensina a preparar a página com detecçêo e fallback.",
       "dica": "Mozilla: neutra (03/08/2026). WebKit: contra. Sem esses dois, nenhum site pode contar com o WebMCP em todo navegador."
     },
     {
@@ -76,8 +76,8 @@
           "titulo": "Que documento?",
           "sub": "o tipo",
           "texto": [
-            "Spec de Community Group é rascunho de um grupo aberto. Não é padrão W3C.",
-            "Leia o subtítulo da spec: o tipo e a data estão no topo."
+            "Spec de Community Group é rascunho de um grupo aberto. Nêo é padrêo W3C.",
+            "Leia o subtítulo da spec: o tipo e a data estêo no topo."
           ],
           "exemplo": {
             "rot": "Em 19/10/2026",
@@ -101,7 +101,7 @@
           "sub": "posições",
           "texto": [
             "Posições de padrões dizem se outro motor pretende implementar.",
-            "WebKit se opôs citando desenho da API, duplicação, i18n, portabilidade, privacidade e segurança."
+            "WebKit se opôs citando desenho da API, duplicaçêo, i18n, portabilidade, privacidade e segurança."
           ],
           "exemplo": {
             "rot": "Posições",
@@ -164,37 +164,37 @@
           "titulo": "E2 · O status com data",
           "min": "7 min",
           "texto": "Abra o Chrome Status (entrada 5117755740913664) e as posições da Mozilla (#1412) e do WebKit (#670). Escreva três linhas: estágio, navegadores e posições, cada uma com a data em que você leu.",
-          "pronto": "Você tem um arquivo status-webmcp.md com três linhas datadas e nenhuma diz \"padrão\" nem \"funciona em todo navegador\"."
+          "pronto": "Você tem um arquivo status-webmcp.md com três linhas datadas e nenhuma diz \"padrêo\" nem \"funciona em todo navegador\"."
         }
       ]
     },
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
           "p": "O que é o documento de 16/10/2026 do WebMCP?",
           "opcoes": [
-            "Uma Recomendação W3C, padrão final da web.",
+            "Uma Recomendaçêo W3C, padrêo final da web.",
             "Um rascunho de Community Group, fora da trilha de padrões.",
-            "Uma especificação do WHATWG já no HTML.",
+            "Uma especificaçêo do WHATWG já no HTML.",
             "Uma proposta interna do Chrome sem texto público."
           ],
           "certa": 1,
-          "explica": "É Draft Community Group Report do Web Machine Learning CG, e o texto diz que não é padrão W3C nem está na trilha. O erro comum é chamar de \"padrão\" só porque está no domínio do W3C.",
+          "explica": "É Draft Community Group Report do Web Machine Learning CG, e o texto diz que nêo é padrêo W3C nem está na trilha. O erro comum é chamar de \"padrêo\" só porque está no domínio do W3C.",
           "ref": "diagrama"
         },
         {
           "p": "Você quer testar WebMCP no localhost hoje. O que liga?",
           "opcoes": [
-            "O token de origin trial do domínio de produção.",
+            "O token de origin trial do domínio de produçêo.",
             "Nada: o Chrome estável já traz a API ligada.",
-            "A extensão de outro navegador com WebMCP.",
+            "A extensêo de outro navegador com WebMCP.",
             "A flag chrome://flags/#enable-webmcp-testing."
           ],
           "certa": 3,
-          "explica": "Para desenvolvimento local, a flag. O token de origin trial é registrado para o domínio do seu site, e o Chrome estável não traz a API por padrão.",
+          "explica": "Para desenvolvimento local, a flag. O token de origin trial é registrado para o domínio do seu site, e o Chrome estável nêo traz a API por padrêo.",
           "ref": "passos"
         },
         {
@@ -206,19 +206,19 @@
             "provideContext em navigator.modelContext"
           ],
           "certa": 0,
-          "explica": "A superfície é document.modelContext. navigator.modelContext é o nome antigo (trocado em 19/05/2026), e unregisterTool e provideContext não existem: remove-se com AbortSignal.",
+          "explica": "A superfície é document.modelContext. navigator.modelContext é o nome antigo (trocado em 19/05/2026), e unregisterTool e provideContext nêo existem: remove-se com AbortSignal.",
           "ref": "codigo"
         },
         {
-          "p": "Por que o curso usa detecção de recurso e fallback em todo exemplo?",
+          "p": "Por que o curso usa detecçêo de recurso e fallback em todo exemplo?",
           "opcoes": [
             "Porque o WebMCP é fator de ranking nas buscas.",
             "Porque o fallback deixa a página mais rápida.",
-            "Porque não há data de estável e WebKit é contra.",
+            "Porque nêo há data de estável e WebKit é contra.",
             "Porque o Chrome exige isso para aceitar o token."
           ],
           "certa": 2,
-          "explica": "Sem data de estável, com Mozilla neutra e WebKit contra, a maioria dos visitantes não terá a API. WebMCP é preparação, não ranking: GEO e citação nas IAs ficam na Formação ARCKHÉSEO.",
+          "explica": "Sem data de estável, com Mozilla neutra e WebKit contra, a maioria dos visitantes nêo terá a API. WebMCP é preparaçêo, nêo ranking: GEO e citaçêo nas IAs ficam na Formaçêo ARCKHÉSEO.",
           "ref": "diagrama"
         }
       ]
@@ -229,7 +229,7 @@
       "itens": [
         {
           "t": "Rascunho",
-          "texto": "WebMCP é Draft Community Group Report de 16/10/2026: experimental, não padrão."
+          "texto": "WebMCP é Draft Community Group Report de 16/10/2026: experimental, nêo padrêo."
         },
         {
           "t": "Onde roda",
@@ -237,7 +237,7 @@
         },
         {
           "t": "Como preparar",
-          "texto": "Data da spec no código, detecção de recurso e o site funcionando igual sem a API."
+          "texto": "Data da spec no código, detecçêo de recurso e o site funcionando igual sem a API."
         }
       ]
     },
@@ -251,7 +251,7 @@
           "icone": "arquivo"
         },
         {
-          "t": "Status de implementação por navegador",
+          "t": "Status de implementaçêo por navegador",
           "href": "https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md",
           "icone": "lista"
         },
@@ -261,22 +261,22 @@
           "icone": "grafico"
         },
         {
-          "t": "Posição da Mozilla (#1412)",
+          "t": "Posiçêo da Mozilla (#1412)",
           "href": "https://github.com/mozilla/standards-positions/issues/1412",
           "icone": "chat"
         },
         {
-          "t": "Posição do WebKit (#670)",
+          "t": "Posiçêo do WebKit (#670)",
           "href": "https://github.com/WebKit/standards-positions/issues/670",
           "icone": "chat"
         },
         {
-          "t": "GEO e citação nas IAs: Formação ARCKHÉSEO",
+          "t": "GEO e citaçêo nas IAs: Formaçêo ARCKHÉSEO",
           "href": "https://linnoff88-dev.github.io/
           "icone": "lupa"
         },
         {
-          "t": "Curso 0 da formação: como os agentes usam um site hoje",
+          "t": "Curso 0 da formaçêo: como os agentes usam um site hoje",
           "href": "https://linnoff88-dev.github.io/
           "icone": "camadas"
         }

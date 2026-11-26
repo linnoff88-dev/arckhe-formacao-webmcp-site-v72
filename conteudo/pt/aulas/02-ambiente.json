@@ -5,7 +5,7 @@
   "titulo": "Ambiente: flag, origin trial, polyfill e três modos de teste",
   "titulo_curto": "Ambiente e três modos",
   "minutos": 15,
-  "lead": "Você não precisa de Chrome experimental instalado para trabalhar. O kit sobe a página num servidor local e abre o mesmo Chromium do Playwright em três modos: sem a API, com o polyfill e com o WebMCP nativo atrás da flag de teste. Sem custo e sem chave de API.",
+  "lead": "Você nêo precisa de Chrome experimental instalado para trabalhar. O kit sobe a página num servidor local e abre o mesmo Chromium do Playwright em três modos: sem a API, com o polyfill e com o WebMCP nativo atrás da flag de teste. Sem custo e sem chave de API.",
   "objetivo": "montar o kit e ver a mesma página em três modos (sem API, polyfill, nativo) sem gastar cota nem instalar Chrome experimental.",
   "competencias": [
     "montar-o-kit",
@@ -19,7 +19,7 @@
     },
     {
       "icone": "cadeado",
-      "t": "Contexto seguro: https em produção, 127.0.0.1 no ensaio"
+      "t": "Contexto seguro: https em produçêo, 127.0.0.1 no ensaio"
     },
     {
       "icone": "camadas",
@@ -41,24 +41,24 @@
           "icone": "usuario",
           "titulo": "Sem",
           "sub": "maioria",
-          "detalhe": "Chromium sem a flag: document.modelContext não existe. É o visitante comum (Safari, Firefox, Chrome estável). A página tem de funcionar igual pelo formulário."
+          "detalhe": "Chromium sem a flag: document.modelContext nêo existe. É o visitante comum (Safari, Firefox, Chrome estável). A página tem de funcionar igual pelo formulário."
         },
         {
           "icone": "copiar",
           "titulo": "Polyfill",
           "sub": "ensaio",
-          "detalhe": "A página carrega @mcp-b/webmcp-polyfill 6.0.3 com ?ensaio=polyfill. É a redistribuição temporária do polyfill do próprio CG, mantida pela MCP-B: não oficial e, nas palavras do pacote, \"will eventually be removed\". Não dispara toolactivated nem toolcancel."
+          "detalhe": "A página carrega @mcp-b/webmcp-polyfill 6.0.3 com ?ensaio=polyfill. É a redistribuiçêo temporária do polyfill do próprio CG, mantida pela MCP-B: nêo oficial e, nas palavras do pacote, \"will eventually be removed\". Nêo dispara toolactivated nem toolcancel."
         },
         {
           "icone": "chip",
           "titulo": "Nativo",
           "sub": "flag de teste",
           "forte": true,
-          "detalhe": "O Chromium 156.0.8078.4 do Playwright 1.64.0 com --enable-features=WebMCPTesting, o mesmo que a flag chrome://flags/#enable-webmcp-testing. É a implementação do Chrome, sem token e sem Canary. Experimental em 19/10/2026."
+          "detalhe": "O Chromium 156.0.8078.4 do Playwright 1.64.0 com --enable-features=WebMCPTesting, o mesmo que a flag chrome://flags/#enable-webmcp-testing. É a implementaçêo do Chrome, sem token e sem Canary. Experimental em 19/10/2026."
         },
         {
           "icone": "nuvem",
-          "titulo": "Produção",
+          "titulo": "Produçêo",
           "sub": "origin trial",
           "detalhe": "No seu domínio, com token do origin trial (Chrome 149–156) numa meta tag ou cabeçalho. Só quem usa Chrome ou Edge no trial vê as ferramentas; todo o resto cai no modo Sem."
         }
@@ -82,7 +82,7 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>&gt; kit-webmcp-no-seu-site@1.0.0 postinstall\n&gt; node scripts/copiar-polyfill.mjs\n\npolyfill copiado para pagina/vendor/webmcp-polyfill.js\n\nadded 4 packages, and audited 5 packages in 1s\n\nfound 0 vulnerabilities\n(…) barras de progresso cortadas\nDownloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux-arm64/chrome-linux-arm64.zip\nChrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to ~/.cache/ms-playwright/chromium-1248\nDownloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux-arm64.zip\nFFmpeg (playwright ffmpeg v1013) downloaded to ~/.cache/ms-playwright/ffmpeg-1013\nDownloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux-arm64/chrome-headless-shell-linux-arm64.zip\nChrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to ~/.cache/ms-playwright/chromium_headless_shell-1248\nsaída: 0</pre><p>Na primeira vez, o playwright install baixa o Chrome for Testing 156.0.8078.4 (190,5 MiB), o headless shell (119,9 MiB) e o FFmpeg (1,9 MiB); nas seguintes, não baixa de novo. O caminho (aqui linux-arm64) e o tempo mudam de máquina para máquina.</p>"
+            "html": "<pre>&gt; kit-webmcp-no-seu-site@1.0.0 postinstall\n&gt; node scripts/copiar-polyfill.mjs\n\npolyfill copiado para pagina/vendor/webmcp-polyfill.js\n\nadded 4 packages, and audited 5 packages in 1s\n\nfound 0 vulnerabilities\n(…) barras de progresso cortadas\nDownloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux-arm64/chrome-linux-arm64.zip\nChrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to ~/.cache/ms-playwright/chromium-1248\nDownloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux-arm64.zip\nFFmpeg (playwright ffmpeg v1013) downloaded to ~/.cache/ms-playwright/ffmpeg-1013\nDownloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux-arm64/chrome-headless-shell-linux-arm64.zip\nChrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to ~/.cache/ms-playwright/chromium_headless_shell-1248\nsaída: 0</pre><p>Na primeira vez, o playwright install baixa o Chrome for Testing 156.0.8078.4 (190,5 MiB), o headless shell (119,9 MiB) e o FFmpeg (1,9 MiB); nas seguintes, nêo baixa de novo. O caminho (aqui linux-arm64) e o tempo mudam de máquina para máquina.</p>"
           },
           {
             "rot": "Erro comum: esqueceu o Chromium",
@@ -107,7 +107,7 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: sem\ncontexto seguro: sim · document.modelContext: ausente · navigator.modelContext: ausente\npágina: sem · aviso: Este navegador não expõe WebMCP. Tudo funciona pelo formulário.\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\ncontexto seguro: sim · document.modelContext: presente · navigator.modelContext: ausente\npágina: com · aviso: WebMCP ativo: 4 ferramentas registradas.\n== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ncontexto seguro: sim · document.modelContext: presente · navigator.modelContext: ausente\npágina: com · aviso: WebMCP ativo: 4 ferramentas registradas.\nsaída: 0</pre><p>No modo Sem, a página avisa e segue pelo formulário. Nos outros dois, registra 4 ferramentas. Em nenhum existe navigator.modelContext.</p>"
+            "html": "<pre>== Chromium 156.0.8078.4 (Playwright) · modo: sem\ncontexto seguro: sim · document.modelContext: ausente · navigator.modelContext: ausente\npágina: sem · aviso: Este navegador nêo expõe WebMCP. Tudo funciona pelo formulário.\n== Chromium 156.0.8078.4 (Playwright) · modo: polyfill\ncontexto seguro: sim · document.modelContext: presente · navigator.modelContext: ausente\npágina: com · aviso: WebMCP ativo: 4 ferramentas registradas.\n== Chromium 156.0.8078.4 (Playwright) · modo: nativo\ncontexto seguro: sim · document.modelContext: presente · navigator.modelContext: ausente\npágina: com · aviso: WebMCP ativo: 4 ferramentas registradas.\nsaída: 0</pre><p>No modo Sem, a página avisa e segue pelo formulário. Nos outros dois, registra 4 ferramentas. Em nenhum existe navigator.modelContext.</p>"
           }
         ]
       }
@@ -143,14 +143,14 @@
         },
         {
           "titulo": "Inspector",
-          "sub": "extensão",
+          "sub": "extensêo",
           "texto": [
-            "O Google publica a extensão Model Context Tool Inspector, que lista e chama as ferramentas por linguagem natural.",
-            "Ela pede chave de API de um modelo (Gemini). Não é necessária neste curso."
+            "O Google publica a extensêo Model Context Tool Inspector, que lista e chama as ferramentas por linguagem natural.",
+            "Ela pede chave de API de um modelo (Gemini). Nêo é necessária neste curso."
           ]
         },
         {
-          "titulo": "Produção",
+          "titulo": "Produçêo",
           "sub": "origin trial",
           "texto": [
             "Registre o seu domínio no origin trial do WebMCP e cole o token na meta tag do topo de kit/pagina/index.html.",
@@ -190,24 +190,24 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
-          "p": "Por que o kit serve a página em 127.0.0.1 e não abre o arquivo direto?",
+          "p": "Por que o kit serve a página em 127.0.0.1 e nêo abre o arquivo direto?",
           "opcoes": [
-            "Porque o Playwright não consegue abrir arquivo local pelo caminho do disco.",
+            "Porque o Playwright nêo consegue abrir arquivo local pelo caminho do disco.",
             "Porque o polyfill só funciona com Node.",
             "Porque a API exige contexto seguro, e 127.0.0.1 conta como seguro.",
             "Porque o origin trial só aceita endereço IP."
           ],
           "certa": 2,
-          "explica": "ModelContext é [SecureContext]: só existe em https ou localhost/127.0.0.1. Em produção, https. O erro comum é testar por file:// e achar que a API sumiu.",
+          "explica": "ModelContext é [SecureContext]: só existe em https ou localhost/127.0.0.1. Em produçêo, https. O erro comum é testar por file:// e achar que a API sumiu.",
           "ref": "diagrama"
         },
         {
           "p": "O que o modo Sem prova?",
           "opcoes": [
-            "Que a página funciona para quem não tem a API.",
+            "Que a página funciona para quem nêo tem a API.",
             "Que o polyfill foi carregado corretamente antes do registro das ferramentas.",
             "Que o token do origin trial está válido.",
             "Que o agente escolhe a ferramenta certa."
@@ -219,25 +219,25 @@
         {
           "p": "O que é o @mcp-b/webmcp-polyfill 6.0.3 neste curso?",
           "opcoes": [
-            "A implementação oficial do W3C para produção.",
+            "A implementaçêo oficial do W3C para produçêo.",
             "Um plugin do Chrome que liga a flag de teste sozinho, sem você abrir chrome://flags.",
             "Uma ponte que conecta a página ao Claude Desktop.",
-            "Um ensaio não oficial e temporário da API da spec."
+            "Um ensaio nêo oficial e temporário da API da spec."
           ],
           "certa": 3,
-          "explica": "É redistribuição temporária do polyfill do CG, mantida pela MCP-B, e avisa que será removida. Serve para ensaiar a API da spec; não dispara toolactivated/toolcancel. A ponte com MCP é o @mcp-b/global, fora deste curso.",
+          "explica": "É redistribuiçêo temporária do polyfill do CG, mantida pela MCP-B, e avisa que será removida. Serve para ensaiar a API da spec; nêo dispara toolactivated/toolcancel. A ponte com MCP é o @mcp-b/global, fora deste curso.",
           "ref": "diagrama"
         },
         {
-          "p": "Que modo usa a implementação de verdade do Chrome sem token?",
+          "p": "Que modo usa a implementaçêo de verdade do Chrome sem token?",
           "opcoes": [
             "O modo Sem, com o Chrome estável.",
             "O modo Nativo, Chromium do Playwright com a flag de teste.",
             "O modo Polyfill, com ?ensaio=polyfill no fim do endereço da página do kit.",
-            "Nenhum: sem token não há implementação."
+            "Nenhum: sem token nêo há implementaçêo."
           ],
           "certa": 1,
-          "explica": "O Chromium 156.0.8078.4 do Playwright 1.64.0 com --enable-features=WebMCPTesting expõe a implementação do Chrome. É experimental e pode mudar até o fim do trial (156).",
+          "explica": "O Chromium 156.0.8078.4 do Playwright 1.64.0 com --enable-features=WebMCPTesting expõe a implementaçêo do Chrome. É experimental e pode mudar até o fim do trial (156).",
           "ref": "codigo"
         }
       ]
@@ -252,10 +252,10 @@
         },
         {
           "t": "Três modos",
-          "texto": "Sem prova o fallback, Polyfill ensaia a API, Nativo roda a implementação do Chrome."
+          "texto": "Sem prova o fallback, Polyfill ensaia a API, Nativo roda a implementaçêo do Chrome."
         },
         {
-          "t": "Produção",
+          "t": "Produçêo",
           "texto": "Origin trial no seu domínio; o resto dos visitantes cai no modo Sem."
         }
       ]
@@ -280,7 +280,7 @@
           "icone": "git"
         },
         {
-          "t": "Pacotes MCP-B (não oficiais)",
+          "t": "Pacotes MCP-B (nêo oficiais)",
           "href": "https://github.com/WebMCP-org/npm-packages",
           "icone": "git"
         },

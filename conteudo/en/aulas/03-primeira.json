@@ -47,7 +47,7 @@
           "icone": "carregar",
           "titulo": "registerTool",
           "sub": "the page",
-          "detalhe": "document.modelContext.registerTool(definição, { signal }) returns a Promise with no value. It rejects with InvalidStateError if the name is repeated, breaks the rule, or the description is empty."
+          "detalhe": "document.modelContext.registerTool(definiçêo, { signal }) returns a Promise with no value. It rejects with InvalidStateError if the name is repeated, breaks the rule, or the description is empty."
         },
         {
           "icone": "lupa",
@@ -79,12 +79,12 @@
         {
           "rot": "Excerpt · kit/pagina/ferramentas.mjs",
           "icone": "arquivo",
-          "conteudo": "{\n  name: 'buscar_oficinas',\n  title: 'Buscar oficinas',\n  description: 'Lista as oficinas da agenda por tema. Só lê: não reserva nada. Use apenasComVaga=true para ver só as que ainda têm vaga.',\n  inputSchema: {\n    type: 'object',\n    properties: {\n      tema: { type: 'string', enum: TEMAS, description: 'Tema da oficina.' },\n      apenasComVaga: { type: 'boolean', description: 'true = só oficinas com vaga.' }\n    },\n    additionalProperties: false\n  },\n  annotations: { readOnlyHint: true },\n  execute: comErroUtil(async input => {\n    const lista = agenda.buscar(input);\n    ui.mostrarResultados(lista, input);   // the person sees the same thing the agent received\n    return { total: lista.length, oficinas: lista };\n  })\n}"
+          "conteudo": "{\n  name: 'buscar_oficinas',\n  title: 'Buscar oficinas',\n  description: 'Lista as oficinas da agenda por tema. Só lê: nêo reserva nada. Use apenasComVaga=true para ver só as que ainda têm vaga.',\n  inputSchema: {\n    type: 'object',\n    properties: {\n      tema: { type: 'string', enum: TEMAS, description: 'Tema da oficina.' },\n      apenasComVaga: { type: 'boolean', description: 'true = só oficinas com vaga.' }\n    },\n    additionalProperties: false\n  },\n  annotations: { readOnlyHint: true },\n  execute: comErroUtil(async input => {\n    const lista = agenda.buscar(input);\n    ui.mostrarResultados(lista, input);   // the person sees the same thing the agent received\n    return { total: lista.length, oficinas: lista };\n  })\n}"
         },
         {
           "rot": "Excerpt · registering with detection (ferramentas.mjs)",
           "icone": "arquivo",
-          "conteudo": "const mc = document.modelContext;   // current name (10/16/2026)\nif (!mc || typeof mc.registerTool !== 'function') {\n  aviso?.('Este navegador não expõe WebMCP. Tudo funciona pelo formulário.');\n  return { modo: 'sem', registradas: 0 };\n}\nconst pagina = new AbortController();\naddEventListener('pagehide', () => pagina.abort(), { once: true });\nawait registrar(mc, defs, pagina.signal);"
+          "conteudo": "const mc = document.modelContext;   // current name (10/16/2026)\nif (!mc || typeof mc.registerTool !== 'function') {\n  aviso?.('Este navegador nêo expõe WebMCP. Tudo funciona pelo formulário.');\n  return { modo: 'sem', registradas: 0 };\n}\nconst pagina = new AbortController();\naddEventListener('pagehide', () => pagina.abort(), { once: true });\nawait registrar(mc, defs, pagina.signal);"
         }
       ]
     },
@@ -121,7 +121,7 @@
         {
           "rot": "Terminal · sandbox with contar_vagas",
           "icone": "caneta",
-          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a3; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\ncat > $E/extras.mjs <<'FIM'\nexport function extras(agenda) {\n  return [{\n    name: 'contar_vagas',\n    description: 'Soma as vagas livres das oficinas de um tema. Só lê: não reserva nada.',\n    inputSchema: {\n      type: 'object',\n      properties: { tema: { type: 'string', enum: ['html', 'javascript', 'webmcp', 'mcp'], description: 'Tema da oficina.' } },\n      required: ['tema'],\n      additionalProperties: false\n    },\n    annotations: { readOnlyHint: true },\n    async execute({ tema }) {\n      const lista = agenda.buscar({ tema });\n      return { tema, vagas: lista.reduce((soma, o) => soma + o.vagas, 0) };\n    }\n  }];\n}\nFIM\nPAGINA=$E node scripts/listar.mjs nativo | tail -1\nPAGINA=$E node scripts/executar.mjs nativo contar_vagas '{\"tema\":\"html\"}'; echo \"saída: $?\""
+          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a3; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\ncat > $E/extras.mjs <<'FIM'\nexport function extras(agenda) {\n  return [{\n    name: 'contar_vagas',\n    description: 'Soma as vagas livres das oficinas de um tema. Só lê: nêo reserva nada.',\n    inputSchema: {\n      type: 'object',\n      properties: { tema: { type: 'string', enum: ['html', 'javascript', 'webmcp', 'mcp'], description: 'Tema da oficina.' } },\n      required: ['tema'],\n      additionalProperties: false\n    },\n    annotations: { readOnlyHint: true },\n    async execute({ tema }) {\n      const lista = agenda.buscar({ tema });\n      return { tema, vagas: lista.reduce((soma, o) => soma + o.vagas, 0) };\n    }\n  }];\n}\nFIM\nPAGINA=$E node scripts/listar.mjs nativo | tail -1\nPAGINA=$E node scripts/executar.mjs nativo contar_vagas '{\"tema\":\"html\"}'; echo \"saída: $?\""
         }
       ],
       "saida": {

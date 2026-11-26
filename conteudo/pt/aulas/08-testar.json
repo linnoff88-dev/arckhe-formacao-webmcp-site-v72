@@ -5,7 +5,7 @@
   "titulo": "Testar sozinho: bateria nos três modos, checklist e plano",
   "titulo_curto": "Bateria, checklist e plano",
   "minutos": 18,
-  "lead": "Uma ferramenta só está pronta quando um teste prova que ela funciona e que a página continua igual sem ela. A bateria do kit roda sem modelo nos três modos, compara ferramenta com formulário, testa a confirmação e a remoção. Nesta aula você a roda, vê uma quebra ser pega e sai com o plano datado do seu site.",
+  "lead": "Uma ferramenta só está pronta quando um teste prova que ela funciona e que a página continua igual sem ela. A bateria do kit roda sem modelo nos três modos, compara ferramenta com formulário, testa a confirmaçêo e a remoçêo. Nesta aula você a roda, vê uma quebra ser pega e sai com o plano datado do seu site.",
   "objetivo": "rodar a bateria automática nos três modos, ver uma quebra ser pega e sair com o checklist e o plano datado da sua página.",
   "competencias": [
     "rodar-bateria-automatica",
@@ -19,7 +19,7 @@
     },
     {
       "icone": "x",
-      "t": "Uma \"otimização\" perigosa e o teste que pega"
+      "t": "Uma \"otimizaçêo\" perigosa e o teste que pega"
     },
     {
       "icone": "lista",
@@ -53,15 +53,15 @@
           "titulo": "Ferramentas",
           "sub": "registrar e chamar",
           "saida": "Uma ferramenta sua, chamada por executeTool.",
-          "passo": "Requer o degrau 1. Definição, registro com detecção e o resultado em texto JSON."
+          "passo": "Requer o degrau 1. Definiçêo, registro com detecçêo e o resultado em texto JSON."
         },
         {
           "aula": "anotacoes",
           "icone": "portao",
           "quando": "Dia 2",
-          "titulo": "Confirmação",
-          "sub": "anotações e portão",
-          "saida": "Toda ação com efeito atrás do Confirmar.",
+          "titulo": "Confirmaçêo",
+          "sub": "anotações e portêo",
+          "saida": "Toda açêo com efeito atrás do Confirmar.",
           "passo": "Requer o degrau 2. Anotações certas, texto de terceiros como dado e a pessoa decidindo."
         },
         {
@@ -76,7 +76,7 @@
       ],
       "resultado": {
         "titulo": "Ao final do curso",
-        "texto": "Página com ferramentas WebMCP, igual sem a API, com confirmação e bateria automática.",
+        "texto": "Página com ferramentas WebMCP, igual sem a API, com confirmaçêo e bateria automática.",
         "total": "22 exercícios"
       },
       "legenda": "Ciclo de vida, formulário e catálogo (aulas 4, 6 e 7) entram no gerador abaixo."
@@ -97,11 +97,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>ℹ pass 4\nℹ fail 0\n== sem\n   Chromium 156.0.8078.4 (Playwright)\nok    [sem] página sem erro de JavaScript\nok    [sem] sem rolagem horizontal em 390 px\nok    [sem] estado WebMCP esperado (sem) · sem\nok    [sem] busca pelo formulário funciona · of-301\nok    [sem] reserva pelo formulário funciona\n== polyfill\nok    [polyfill] página sem erro de JavaScript\nok    [polyfill] sem rolagem horizontal em 390 px\nok    [polyfill] estado WebMCP esperado (com) · com\nok    [polyfill] busca pelo formulário funciona · of-301\nok    [polyfill] reserva pelo formulário funciona\nok    [polyfill] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga\nok    [polyfill] ferramenta devolve o mesmo que o formulário · of-301\nok    [polyfill] a tela mostra o que o agente recebeu · of-301\nok    [polyfill] reserva recusada na tela não reserva\nok    [polyfill] reserva confirmada aparece na tela\nok    [polyfill] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol\nok    [polyfill] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x, getTools depois: NotAllowedError\nok    [polyfill] nenhum erro de JavaScript na sessão do agente\n== nativo\nok    [nativo] página sem erro de JavaScript\nok    [nativo] sem rolagem horizontal em 390 px\nok    [nativo] estado WebMCP esperado (com) · com\nok    [nativo] busca pelo formulário funciona · of-301\nok    [nativo] reserva pelo formulário funciona\nok    [nativo] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga\nok    [nativo] ferramenta devolve o mesmo que o formulário · of-301\nok    [nativo] a tela mostra o que o agente recebeu · of-301\nok    [nativo] reserva recusada na tela não reserva\nok    [nativo] reserva confirmada aparece na tela\nok    [nativo] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol\nok    [nativo] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x\nok    [nativo] nenhum erro de JavaScript na sessão do agente\nBATERIA: 31/31 ok\nsaída: 0</pre><p>No polyfill, getTools depois do pagehide dá NotAllowedError: ele desliga a API inteira. O teste aceita os dois jeitos de \"sair\": zero ferramentas e toolchange disparado.</p>"
+            "html": "<pre>ℹ pass 4\nℹ fail 0\n== sem\n   Chromium 156.0.8078.4 (Playwright)\nok    [sem] página sem erro de JavaScript\nok    [sem] sem rolagem horizontal em 390 px\nok    [sem] estado WebMCP esperado (sem) · sem\nok    [sem] busca pelo formulário funciona · of-301\nok    [sem] reserva pelo formulário funciona\n== polyfill\nok    [polyfill] página sem erro de JavaScript\nok    [polyfill] sem rolagem horizontal em 390 px\nok    [polyfill] estado WebMCP esperado (com) · com\nok    [polyfill] busca pelo formulário funciona · of-301\nok    [polyfill] reserva pelo formulário funciona\nok    [polyfill] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga\nok    [polyfill] ferramenta devolve o mesmo que o formulário · of-301\nok    [polyfill] a tela mostra o que o agente recebeu · of-301\nok    [polyfill] reserva recusada na tela nêo reserva\nok    [polyfill] reserva confirmada aparece na tela\nok    [polyfill] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol\nok    [polyfill] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x, getTools depois: NotAllowedError\nok    [polyfill] nenhum erro de JavaScript na sessêo do agente\n== nativo\nok    [nativo] página sem erro de JavaScript\nok    [nativo] sem rolagem horizontal em 390 px\nok    [nativo] estado WebMCP esperado (com) · com\nok    [nativo] busca pelo formulário funciona · of-301\nok    [nativo] reserva pelo formulário funciona\nok    [nativo] as 4 ferramentas do kit registradas · buscar_oficinas, listar_comentarios, minhas_reservas, reservar_vaga\nok    [nativo] ferramenta devolve o mesmo que o formulário · of-301\nok    [nativo] a tela mostra o que o agente recebeu · of-301\nok    [nativo] reserva recusada na tela nêo reserva\nok    [nativo] reserva confirmada aparece na tela\nok    [nativo] entrada inválida volta erro legível, sem mudar nada · tema inválido: cobol\nok    [nativo] ao sair da página as ferramentas saem (AbortSignal) · 0 restantes, toolchange 4x\nok    [nativo] nenhum erro de JavaScript na sessêo do agente\nBATERIA: 31/31 ok\nsaída: 0</pre><p>No polyfill, getTools depois do pagehide dá NotAllowedError: ele desliga a API inteira. O teste aceita os dois jeitos de \"sair\": zero ferramentas e toolchange disparado.</p>"
           },
           {
             "rot": "Erro comum: reservar sem esperar",
-            "html": "<pre>FALHA [nativo] reserva recusada na tela não reserva\nBATERIA: 12/13 ok\nsaída: 1</pre><p>Alguém troca a espera pelo clique por <code>const ok = true</code> para \"agilizar\". A bateria falha em \"reserva recusada na tela não reserva\" e sai com 1. É para isso que ela existe.</p>"
+            "html": "<pre>FALHA [nativo] reserva recusada na tela nêo reserva\nBATERIA: 12/13 ok\nsaída: 1</pre><p>Alguém troca a espera pelo clique por <code>const ok = true</code> para \"agilizar\". A bateria falha em \"reserva recusada na tela nêo reserva\" e sai com 1. É para isso que ela existe.</p>"
           }
         ]
       }
@@ -114,7 +114,7 @@
         {
           "rot": "Terminal · quebra provocada",
           "icone": "x",
-          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a8; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\n# a \"otimização\" perigosa: reservar sem esperar a pessoa\nsed -i 's/const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);/const ok = true;/' $E/ferramentas.mjs\nPAGINA=$E node scripts/testar.mjs nativo | grep -E \"FALHA|BATERIA\"; echo \"saída: ${PIPESTATUS[0]}\""
+          "conteudo": "cd ~/projetos/formacao-webmcp-site-v72/kit\nE=${TMPDIR:-/tmp}/ensaio-webmcp-site/a8; rm -rf $E; mkdir -p $E; cp -r pagina/. $E/\n# a \"otimizaçêo\" perigosa: reservar sem esperar a pessoa\nsed -i 's/const ok = await ui.pedirConfirmacao({ oficina, nome }, signal);/const ok = true;/' $E/ferramentas.mjs\nPAGINA=$E node scripts/testar.mjs nativo | grep -E \"FALHA|BATERIA\"; echo \"saída: ${PIPESTATUS[0]}\""
         }
       ]
     },
@@ -128,7 +128,7 @@
           "sub": "modo Sem",
           "texto": [
             "O site funciona igual sem document.modelContext.",
-            "Nada de polyfill em produção: ele é só para o ensaio."
+            "Nada de polyfill em produçêo: ele é só para o ensaio."
           ]
         },
         {
@@ -136,12 +136,12 @@
           "sub": "validador",
           "texto": [
             "validar-catalogo.mjs com 0 erros.",
-            "Cada ferramenta com uma intenção e a anotação certa."
+            "Cada ferramenta com uma intençêo e a anotaçêo certa."
           ]
         },
         {
           "titulo": "Efeito",
-          "sub": "confirmação",
+          "sub": "confirmaçêo",
           "texto": [
             "Toda ferramenta com consequentialHint espera a pessoa.",
             "Bateria com o caso \"recusar\" passando."
@@ -178,7 +178,7 @@
           "titulo": "E2 · Pegar a quebra",
           "min": "5 min",
           "texto": "Rode o ensaio da quebra provocada e leia a linha que falhou.",
-          "pronto": "O bloco imprime <code>FALHA [nativo] reserva recusada na tela não reserva</code>, <code>BATERIA: 12/13 ok</code> e <code>saída: 1</code>."
+          "pronto": "O bloco imprime <code>FALHA [nativo] reserva recusada na tela nêo reserva</code>, <code>BATERIA: 12/13 ok</code> e <code>saída: 1</code>."
         },
         {
           "id": "e3",
@@ -213,7 +213,7 @@
           "aula": "ciclo"
         },
         {
-          "titulo": "Aula 5 · Anotações e confirmação",
+          "titulo": "Aula 5 · Anotações e confirmaçêo",
           "aula": "anotacoes"
         },
         {
@@ -221,7 +221,7 @@
           "aula": "formulario"
         },
         {
-          "titulo": "Aula 7 · Catálogo e migração",
+          "titulo": "Aula 7 · Catálogo e migraçêo",
           "aula": "catalogo"
         },
         {
@@ -245,15 +245,15 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da resposta.",
+      "sub": "A explicaçêo aparece depois da resposta.",
       "perguntas": [
         {
-          "p": "Qual verificação pega a troca da confirmação por const ok = true?",
+          "p": "Qual verificaçêo pega a troca da confirmaçêo por const ok = true?",
           "opcoes": [
             "As 4 ferramentas do kit registradas.",
             "A tela mostra o que o agente recebeu.",
             "Sem rolagem horizontal em 390 px, no celular e no modo nativo.",
-            "Reserva recusada na tela não reserva."
+            "Reserva recusada na tela nêo reserva."
           ],
           "certa": 3,
           "explica": "Sem a espera, a reserva acontece mesmo quando a pessoa recusa. As outras verificações continuam verdes: por isso o caso \"recusar\" tem de existir.",
@@ -264,7 +264,7 @@
           "opcoes": [
             "Para medir qual dos dois é mais rápido.",
             "Para o agente aprender com o formulário e repetir o caminho da pessoa.",
-            "Para provar que os dois caminhos dão o mesmo resultado.",
+            "Para provar que os dois caminhos dêo o mesmo resultado.",
             "Porque o polyfill só funciona com formulário."
           ],
           "certa": 2,
@@ -280,14 +280,14 @@
             "Só para quem usa Safari ou Firefox."
           ],
           "certa": 1,
-          "explica": "Polyfill é ensaio, não oficial e temporário. Em produção, quem tem a API (trial ou flag) usa a nativa; o resto usa o formulário.",
+          "explica": "Polyfill é ensaio, nêo oficial e temporário. Em produçêo, quem tem a API (trial ou flag) usa a nativa; o resto usa o formulário.",
           "ref": "passos"
         },
         {
           "p": "A spec ganhou uma data nova. Primeiro passo?",
           "opcoes": [
             "Rodar a bateria e ler o que mudou na spec.",
-            "Remover todas as ferramentas da página até o Chrome lançar a versão estável.",
+            "Remover todas as ferramentas da página até o Chrome lançar a versêo estável.",
             "Trocar document por navigator nos exemplos.",
             "Esperar o fim do origin trial no Chrome 156."
           ],
@@ -303,11 +303,11 @@
       "itens": [
         {
           "t": "Bateria",
-          "texto": "Três modos, ferramenta igual ao formulário, confirmação, entrada inválida e remoção."
+          "texto": "Três modos, ferramenta igual ao formulário, confirmaçêo, entrada inválida e remoçêo."
         },
         {
           "t": "Quebra",
-          "texto": "O caso \"recusar\" pega quem tira a confirmação para agilizar."
+          "texto": "O caso \"recusar\" pega quem tira a confirmaçêo para agilizar."
         },
         {
           "t": "Plano",
@@ -330,7 +330,7 @@
           "icone": "cadeado"
         },
         {
-          "t": "Evals e verificação a fundo (Formação LOOP-R Engenharia)",
+          "t": "Evals e verificaçêo a fundo (Formaçêo LOOP-R Engenharia)",
           "href": "https://linnoff88-dev.github.io/
           "icone": "check"
         },
